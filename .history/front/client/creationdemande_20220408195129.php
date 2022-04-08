@@ -100,7 +100,8 @@ $titre = "Nouvelle demande";
             </div>
           
             <div class="col-12">
-              <input class="btn btn-primary m-3 d-grid gap-2 col-6 mx-auto" type="submit" name="envoiDemande" value="Envoyer ma demande "> 
+              
+              <input class="btn btn-primary m-3 d-grid gap-2 col-6 mx-auto" type="submit" value="Envoyer ma demande"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             </div>
           </form>
         </main>

@@ -3,6 +3,7 @@
 $titre = "Nouvelle demande";
 @include "../includes/head-style.php";
 @include "../includes/header.php";
+@include "../client/client-navbar.php";
 ?>
 
 <div class="container-fluid">
@@ -10,12 +11,9 @@ $titre = "Nouvelle demande";
       <?php  @include "../client/client-navbar.php";  ?>
       
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 pt-5">
-
-
-          <form class="row g-3 border border-2 rounded mb-3 shadow-lg p-3 mb-5 bg-body rounded">
-            <legend class="text-center"> Formulaire nouvelle demande</legend>
+          <form class="row g-3">
             <div class="col-md-6">
-              <label for="nom" class="form-label">Nom Client</label>
+              <label for="nom" class="form-label">Client</label>
               <input type="text" class="form-control" id="nom" />
             </div>
             <div class="col-md-6">
@@ -84,23 +82,16 @@ $titre = "Nouvelle demande";
   <label for="conditionsParticulieres">Condition particulières</label>
 </div>
             
-            <div class="col-md-6">
+            <div class="col-md-4">
               <label for="materiel1" class="form-label">Matériel 1</label>
               <select id="materiel1" class="form-select">
                 <option selected>Choose...</option>
                 <option>...</option>
               </select>
             </div>
-            <div class="col-md-6">
-              <label for="materiel2" class="form-label">Matériel 2</label>
-              <select id="materiel2" class="form-select">
-                <option selected>Choose...</option>
-                <option>...</option>
-              </select>
-            </div>
           
             <div class="col-12">
-              <input class="btn btn-primary m-3 d-grid gap-2 col-6 mx-auto" type="submit" name="envoiDemande" value="Envoyer ma demande "> 
+              <button type="submit" class="btn btn-primary">Sign in</button>
             </div>
           </form>
         </main>

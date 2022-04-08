@@ -3,6 +3,7 @@
 $titre = "Nouvelle demande";
 @include "../includes/head-style.php";
 @include "../includes/header.php";
+@include "../client/client-navbar.php";
 ?>
 
 <div class="container-fluid">
@@ -10,12 +11,9 @@ $titre = "Nouvelle demande";
       <?php  @include "../client/client-navbar.php";  ?>
       
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 pt-5">
-
-
-          <form class="row g-3 border border-2 rounded mb-3 shadow-lg p-3 mb-5 bg-body rounded">
-            <legend class="text-center"> Formulaire nouvelle demande</legend>
+          <form class="row g-3">
             <div class="col-md-6">
-              <label for="nom" class="form-label">Nom Client</label>
+              <label for="nom" class="form-label">Client</label>
               <input type="text" class="form-control" id="nom" />
             </div>
             <div class="col-md-6">
@@ -49,6 +47,7 @@ $titre = "Nouvelle demande";
                 type="text"
                 class="form-control"
                 id="longitude"
+                placeholder="Apartment, studio, or floor"
               />
             </div>
             <div class="col-4">
@@ -57,50 +56,35 @@ $titre = "Nouvelle demande";
                 type="text"
                 class="form-control"
                 id="profondeur"
+                placeholder="Apartment, studio, or floor"
               />
             </div>
-            <div class="col-6">
-              <label for="dateDebut" class="form-label"> Date de début</label>
-              <input
-                type="text"
-                class="form-control"
-                id="dateDeFin"
-              />
-            </div>
-             <div class="col-6">
-              <label for="dateDeFin" class="form-label"> Date de fin</label>
-              <input
-                type="text"
-                class="form-control"
-                id="dateDeFin"
-              />
-            </div>
-            <div class="form-floating">
-  <textarea class="form-control"  id="besoins" style="height: 100px"></textarea>
-  <label for="besoins">Besoins</label>
-</div>
-<div class="form-floating">
-  <textarea class="form-control" id="conditionsParticulieres" style="height: 100px"></textarea>
-  <label for="conditionsParticulieres">Condition particulières</label>
-</div>
             
-            <div class="col-md-6">
-              <label for="materiel1" class="form-label">Matériel 1</label>
-              <select id="materiel1" class="form-select">
+            <div class="col-md-4">
+              <label for="inputState" class="form-label">State</label>
+              <select id="inputState" class="form-select">
                 <option selected>Choose...</option>
                 <option>...</option>
               </select>
             </div>
-            <div class="col-md-6">
-              <label for="materiel2" class="form-label">Matériel 2</label>
-              <select id="materiel2" class="form-select">
-                <option selected>Choose...</option>
-                <option>...</option>
-              </select>
+            <div class="col-md-2">
+              <label for="inputZip" class="form-label">Zip</label>
+              <input type="text" class="form-control" id="inputZip" />
             </div>
-          
             <div class="col-12">
-              <input class="btn btn-primary m-3 d-grid gap-2 col-6 mx-auto" type="submit" name="envoiDemande" value="Envoyer ma demande "> 
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="gridCheck"
+                />
+                <label class="form-check-label" for="gridCheck">
+                  Check me out
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Sign in</button>
             </div>
           </form>
         </main>

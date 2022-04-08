@@ -13,7 +13,7 @@ $titre = "Nouvelle demande";
 
 
           <form class="row g-3 border border-2 rounded mb-3 shadow-lg p-3 mb-5 bg-body rounded">
-            <legend class="text-center"> Formulaire nouvelle demande</legend>
+            <legend class="text-center"> Details de la demande</legend>
             <div class="col-md-6">
               <label for="nom" class="form-label">Nom Client</label>
               <input type="text" class="form-control" id="nom" />
@@ -100,7 +100,7 @@ $titre = "Nouvelle demande";
             </div>
           
             <div class="col-12">
-              <input class="btn btn-primary m-3 d-grid gap-2 col-6 mx-auto" type="submit" name="envoiDemande" value="Envoyer ma demande "> 
+              <button type="submit" class="btn btn-primary m-3 d-grid gap-2 col-6 mx-auto">Envoyer ma demande</button>
             </div>
           </form>
         </main>

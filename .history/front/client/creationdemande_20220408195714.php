@@ -100,7 +100,7 @@ $titre = "Nouvelle demande";
             </div>
           
             <div class="col-12">
-              <input class="btn btn-primary m-3 d-grid gap-2 col-6 mx-auto" type="submit" name="envoiDemande" value="Envoyer ma demande "> 
+              <input class="btn btn-primary m-3 d-grid gap-2 col-6 mx-auto" type="submit" value="Envoyer ma demande "> 
             </div>
           </form>
         </main>
