@@ -13,7 +13,7 @@ $titre = "Nouvelle demande";
 
 
           <form class="row g-3 border border-2 rounded mb-3 shadow-lg p-3 mb-5 bg-body rounded">
-            <legend class="text-center"> Formulaire nouvelle demande</legend>
+            <legend class="text-center"> Details de la demande</legend>
             <div class="col-md-6">
               <label for="nom" class="form-label">Nom Client</label>
               <input type="text" class="form-control" id="nom" />
@@ -62,7 +62,7 @@ $titre = "Nouvelle demande";
             <div class="col-6">
               <label for="dateDebut" class="form-label"> Date de début</label>
               <input
-                type="date"
+                type="text"
                 class="form-control"
                 id="dateDeFin"
               />
@@ -97,12 +97,6 @@ $titre = "Nouvelle demande";
                 <option selected>Choose...</option>
                 <option>...</option>
               </select>
-            </div>
-          <div class="col-6">
-              <input class="btn btn-danger m-3 d-grid gap-2 col-6 mx-auto" type="submit" name="annulerDemande" value="Annuler ma demande "> 
-            </div>
-            <div class="col-6">
-              <input class="btn btn-primary m-3 d-grid gap-2 col-6 mx-auto" type="submit" name="envoiDemande" value="Envoyer ma demande "> 
             </div>
           </form>
         </main>

@@ -62,7 +62,7 @@ $titre = "Nouvelle demande";
             <div class="col-6">
               <label for="dateDebut" class="form-label"> Date de début</label>
               <input
-                type="date"
+                type="text"
                 class="form-control"
                 id="dateDeFin"
               />
@@ -70,7 +70,7 @@ $titre = "Nouvelle demande";
              <div class="col-6">
               <label for="dateDeFin" class="form-label"> Date de fin</label>
               <input
-                type="date"
+                type="text"
                 class="form-control"
                 id="dateDeFin"
               />
@@ -99,7 +99,7 @@ $titre = "Nouvelle demande";
               </select>
             </div>
           <div class="col-6">
-              <input class="btn btn-danger m-3 d-grid gap-2 col-6 mx-auto" type="submit" name="annulerDemande" value="Annuler ma demande "> 
+              <input class="btn btn-danger m-3 d-grid gap-2 col-6 mx-auto" type="submit" name="envoiDemande" value="Envoyer ma demande "> 
             </div>
             <div class="col-6">
               <input class="btn btn-primary m-3 d-grid gap-2 col-6 mx-auto" type="submit" name="envoiDemande" value="Envoyer ma demande "> 

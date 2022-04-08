@@ -5,7 +5,7 @@
   }
 
   .cardMessage {
-    background-color:white;
+    background-color: green;
   }
   
 

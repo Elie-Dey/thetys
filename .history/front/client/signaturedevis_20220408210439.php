@@ -1,6 +1,6 @@
 <?php 
 //Definition du titre de la page 
-$titre = "Nouvelle demande";
+$titre = "Signature PV";
 @include "../includes/head-style.php";
 @include "../includes/header.php";
 ?>
@@ -13,16 +13,16 @@ $titre = "Nouvelle demande";
 
 
           <form class="row g-3 border border-2 rounded mb-3 shadow-lg p-3 mb-5 bg-body rounded">
-            <legend class="text-center"> Formulaire nouvelle demande</legend>
-            <div class="col-md-6">
+            <legend class="text-center"> Formulaire PV</legend>
+            <div class="col-md-4">
               <label for="nom" class="form-label">Nom Client</label>
               <input type="text" class="form-control" id="nom" />
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
               <label for="reference" class="form-label">reference</label>
               <input type="text" class="form-control" id="reference" />
             </div>
-            <div class="col-12">
+            <div class="col-4">
               <label for="lieuIntervention" class="form-label"
                 >Lieu Intervention</label
               >
@@ -34,11 +34,11 @@ $titre = "Nouvelle demande";
               />
             </div>
             <div class="col-4">
-              <label for="latitude" class="form-label">Latitude </label>
+              <label for="duree" class="form-label">Durée </label>
               <input
                 type="text"
                 class="form-control"
-                id="latitude"
+                id="duree"
                 placeholder=""
                 value=""
               />
@@ -62,7 +62,7 @@ $titre = "Nouvelle demande";
             <div class="col-6">
               <label for="dateDebut" class="form-label"> Date de début</label>
               <input
-                type="date"
+                type="text"
                 class="form-control"
                 id="dateDeFin"
               />
@@ -70,7 +70,7 @@ $titre = "Nouvelle demande";
              <div class="col-6">
               <label for="dateDeFin" class="form-label"> Date de fin</label>
               <input
-                type="date"
+                type="text"
                 class="form-control"
                 id="dateDeFin"
               />

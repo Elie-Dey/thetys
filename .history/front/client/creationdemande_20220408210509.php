@@ -70,7 +70,7 @@ $titre = "Nouvelle demande";
              <div class="col-6">
               <label for="dateDeFin" class="form-label"> Date de fin</label>
               <input
-                type="date"
+                type="text"
                 class="form-control"
                 id="dateDeFin"
               />
