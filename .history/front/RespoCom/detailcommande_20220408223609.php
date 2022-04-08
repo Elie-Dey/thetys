@@ -1,19 +1,26 @@
 <?php 
 //Definition du titre de la page 
-$titre = "Détails demande";
+$titre = "Détails devis";
 @include "../includes/head-style.php";
 @include "../includes/header.php";
 ?>
 
 <div class="container-fluid">
       <div class="row">
-      <?php  @include "../client/client-navbar.php";  ?>
+      <?php  @include "../RespoCom/respoCom-navbar.php";  ?>
       
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 pt-5">
 
 
           <form class="row g-3 border border-2 rounded mb-3 shadow-lg p-3 mb-5 bg-body rounded">
-            <legend class="text-center"> Details de la demande</legend>
+
+
+            <legend class="text-center"> Formulaire détails devis</legend>
+
+
+
+
+            <div class=" col-12 fst-italic text-decoration-underline fw-bolder">  Demande informations </div>
             <div class="col-md-6">
               <label for="nom" class="form-label">Nom Client</label>
               <input type="text" class="form-control" id="nom" />
@@ -97,6 +104,29 @@ $titre = "Détails demande";
                 <option selected>Choose...</option>
                 <option>...</option>
               </select>
+            </div>
+
+
+
+          <div class=" col-12 fw-bold text-decoration-underline fst-italic">  Coûts </div>
+
+
+
+        <div class="col-md-4">
+              <label for="interventionHumaine" class="form-label">Coût Intervention Humaine</label>
+              <input type="text" class="form-control" id="interventionHumaine" />
+            </div>
+            <div class="col-md-4">
+              <label for="coutMateriels" class="form-label">Coût Matériels </label>
+              <input type="text" class="form-control" id="coutMateriels" />
+            </div>
+            <div class="col-md-4">
+              <label for="tva" class="form-label">TVA</label>
+              <input type="text" class="form-control" id="tva" />
+            </div>
+            <div class="col-md-12">
+              <label for="totalttc" class="form-label">Total TTC</label>
+              <input type="text" class="form-control" id="totalttc" />
             </div>
           </form>
         </main>

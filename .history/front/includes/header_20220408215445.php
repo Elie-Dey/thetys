@@ -1,12 +1,7 @@
- <?php
-    $url1=$_SERVER['REQUEST_URI'];
-    header("Refresh: 60; URL=$url1");
-?>
- 
  <header
       class="navbar navbar-dark h-50 sticky-top flex-md-nowrap p-2 shadow"
     >
-      <a class="navbar-brand col-md-3 col-lg-2 me-1 px-3 fw-bold" href="../accueil/accueil.php"
+      <a class="navbar-brand col-md-3 col-lg-2 me-1 px-3 fw-bold" href="#"
         >AIRBLIO - Thétys</a
       >
       <button
@@ -27,7 +22,7 @@
           <?php
               date_default_timezone_set('Europe/Paris');
               setlocale(LC_TIME, ['fr', 'fra', 'fr_FR']);
-             echo strftime('%A %d %B %Y %H:%M'). '<br>';
+             echo strftime('%A %d %B %Y %H:%M:%S'). '<br>';
 
             ?>
 

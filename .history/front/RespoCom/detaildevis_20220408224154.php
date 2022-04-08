@@ -1,6 +1,6 @@
 <?php 
 //Definition du titre de la page 
-$titre = "Détails demande";
+$titre = "Détails devis";
 @include "../includes/head-style.php";
 @include "../includes/header.php";
 ?>
@@ -13,7 +13,14 @@ $titre = "Détails demande";
 
 
           <form class="row g-3 border border-2 rounded mb-3 shadow-lg p-3 mb-5 bg-body rounded">
-            <legend class="text-center"> Details de la demande</legend>
+
+
+            <legend class="text-center"> Formulaire détails devis</legend>
+
+
+
+
+            <div class=" col-12 fst-italic text-decoration-underline fw-bolder">  Demande informations </div>
             <div class="col-md-6">
               <label for="nom" class="form-label">Nom Client</label>
               <input type="text" class="form-control" id="nom" />
@@ -97,6 +104,39 @@ $titre = "Détails demande";
                 <option selected>Choose...</option>
                 <option>...</option>
               </select>
+            </div>
+
+
+
+          <div class=" col-12 fw-bold text-decoration-underline fst-italic">  Coûts </div>
+
+
+
+        <div class="col-md-4">
+              <label for="interventionHumaine" class="form-label">Coût Intervention Humaine</label>
+              <input type="text" class="form-control" id="interventionHumaine" />
+            </div>
+            <div class="col-md-4">
+              <label for="coutMateriels" class="form-label">Coût Matériels </label>
+              <input type="text" class="form-control" id="coutMateriels" />
+            </div>
+            <div class="col-md-4">
+              <label for="tva" class="form-label">TVA</label>
+              <input type="text" class="form-control" id="tva" />
+            </div>
+            <div class="col-md-12">
+              <label for="totalttc" class="form-label">Total TTC</label>
+              <input type="text" class="form-control" id="totalttc" />
+            </div>
+
+             <div class="col-6">
+              <a href="../client/listedevis.php" class="btn btn-danger m-3 d-grid gap-2 col-6 mx-auto"> Annuler la validation </a>
+            </div>
+            <!-- <div class="col-6">
+              <input class="btn btn-success m-3 d-grid gap-2 col-6 mx-auto" name="validerDevis" type="submit" value="Valider le devis">
+            </div> -->
+            <div class="col-6">
+              <a href="../client/successmessage.php" class="btn btn-success m-3 d-grid gap-2 col-6 mx-auto"> Valider la validation </a>
             </div>
           </form>
         </main>

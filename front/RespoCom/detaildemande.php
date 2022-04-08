@@ -7,7 +7,7 @@ $titre = "Détails demande";
 
 <div class="container-fluid">
       <div class="row">
-      <?php  @include "../client/client-navbar.php";  ?>
+      <?php  @include "../RespoCom/respoCom-navbar.php";  ?>
       
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 pt-5">
 
@@ -102,14 +102,6 @@ $titre = "Détails demande";
         </main>
       </div>
     </div>
-
-
-
-
-
-
-
-
 
 <?php  
 @include "../includes/footer.php";
