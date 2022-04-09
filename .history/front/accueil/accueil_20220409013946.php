@@ -203,7 +203,7 @@ $titre = "Accueil";
                 <h2 class="pt-3 mb-4 display-10 lh-1 fw-bold">
                   DONNEES
                 </h2>
-                <a href="../donnees/donnee.php">
+                <a href="../visualisation/visualisation.php">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="50"
