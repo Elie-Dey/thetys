@@ -1,13 +1,13 @@
 <?php 
 //Definition du titre de la page 
-$titre = "Signature PV";
+$titre = "Création PV de mission";
 @include "../includes/head-style.php";
 @include "../includes/header.php";
 ?>
 
 <div class="container-fluid">
       <div class="row">
-      <?php  @include "../respoTech/respoTech-navbar.php";  ?>
+      <?php  @include "../expertTech/expertTech-navbar.php";  ?>
       
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 pt-5">
 
@@ -34,7 +34,7 @@ $titre = "Signature PV";
               />
             </div>
               
-            <div class="fw-bold text-decoration-underline"> Prévus </div>
+            <div class="fw-bold text-decoration-underline text-center h4"> Prévus </div>
             <div class="col-4">
               <label for="duree" class="form-label">Durée </label>
               <input
@@ -80,7 +80,7 @@ $titre = "Signature PV";
                 <label for="besoins">Besoins</label>
             </div>      
 
-            <div class="fw-bold text-decoration-underline"> Réels</div>
+            <div class="fw-bold text-decoration-underline text-center h4"> Réels</div>
 
 
             <div> Type de mission :</div>
@@ -132,6 +132,12 @@ $titre = "Signature PV";
   <textarea class="form-control"  id="descriptions" style="height: 100px"></textarea>
   <label for="descriptions">Descriptions</label>
 </div>
+          <div class="col-6">
+              <input class="btn btn-danger m-3 d-grid gap-2 col-6 mx-auto" type="submit" name="annulerValidation" value="Annuler "> 
+            </div>
+            <div class="col-6">
+              <input class="btn btn-primary m-3 d-grid gap-2 col-6 mx-auto" type="submit" name="validationPV" value="Ajouter PV"> 
+            </div>
           </form>
         </main>
       </div>

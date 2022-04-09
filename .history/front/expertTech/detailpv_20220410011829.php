@@ -1,13 +1,13 @@
 <?php 
 //Definition du titre de la page 
-$titre = "Signature PV";
+$titre = "Détails PV";
 @include "../includes/head-style.php";
 @include "../includes/header.php";
 ?>
 
 <div class="container-fluid">
       <div class="row">
-      <?php  @include "../respoTech/respoTech-navbar.php";  ?>
+      <?php  @include "../expertTech/expertTech-navbar.php";  ?>
       
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 pt-5">
 
@@ -32,9 +32,9 @@ $titre = "Signature PV";
                 id="lieuIntervention"
                 placeholder="Nice"
               />
+
+              <div class="fw-bold text-decoration-underline"> Prévus</div>
             </div>
-              
-            <div class="fw-bold text-decoration-underline"> Prévus </div>
             <div class="col-4">
               <label for="duree" class="form-label">Durée </label>
               <input
@@ -81,8 +81,6 @@ $titre = "Signature PV";
             </div>      
 
             <div class="fw-bold text-decoration-underline"> Réels</div>
-
-
             <div> Type de mission :</div>
             <div class="form-check form-switch ms-5">
                 <input class="form-check-input" type="checkbox" name="assistanceMission" role="switch" id="assistanceMission">
@@ -111,8 +109,7 @@ $titre = "Signature PV";
                 id="dateFinReelle"
               />
             </div>
-
-             <div class="col-md-6">
+            <div class="col-md-6">
               <label for="materiel1Reel" class="form-label">Matériel 1</label>
               <select id="materiel1Reel" class="form-select">
                 <option selected>Choose...</option>
@@ -136,6 +133,8 @@ $titre = "Signature PV";
         </main>
       </div>
     </div>
+
+
 
 
 

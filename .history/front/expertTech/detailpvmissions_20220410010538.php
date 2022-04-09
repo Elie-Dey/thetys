@@ -7,13 +7,13 @@ $titre = "Signature PV";
 
 <div class="container-fluid">
       <div class="row">
-      <?php  @include "../respoTech/respoTech-navbar.php";  ?>
+      <?php  @include "../expertTech/expertTech-navbar.php";  ?>
       
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 pt-5">
 
 
           <form class="row g-3 border border-2 rounded mb-3 shadow-lg p-3 mb-5 bg-body rounded">
-            <legend class="text-center"> Formulaire PV</legend>
+            <legend class="text-center"> Formulaire PV de mission</legend>
             <div class="col-md-4">
               <label for="nom" class="form-label">Nom Client</label>
               <input type="text" class="form-control" id="nom" />
@@ -34,7 +34,7 @@ $titre = "Signature PV";
               />
             </div>
               
-            <div class="fw-bold text-decoration-underline"> Prévus </div>
+            <div class="fw-bold text-decoration-underline text-center h4"> Prévus </div>
             <div class="col-4">
               <label for="duree" class="form-label">Durée </label>
               <input
@@ -80,7 +80,7 @@ $titre = "Signature PV";
                 <label for="besoins">Besoins</label>
             </div>      
 
-            <div class="fw-bold text-decoration-underline"> Réels</div>
+            <div class="fw-bold text-decoration-underline text-center h4"> Réels</div>
 
 
             <div> Type de mission :</div>
@@ -136,8 +136,6 @@ $titre = "Signature PV";
         </main>
       </div>
     </div>
-
-
 
 <?php  
 @include "../includes/footer.php";

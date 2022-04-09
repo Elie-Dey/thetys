@@ -34,7 +34,7 @@ $titre = "Signature PV";
               />
             </div>
               
-            <div class="fw-bold text-decoration-underline"> Prévus </div>
+            <div class="fw-bold text-decoration-underline text-center"> Prévus </div>
             <div class="col-4">
               <label for="duree" class="form-label">Durée </label>
               <input
@@ -80,7 +80,7 @@ $titre = "Signature PV";
                 <label for="besoins">Besoins</label>
             </div>      
 
-            <div class="fw-bold text-decoration-underline"> Réels</div>
+            <div class="fw-bold text-decoration-underline text-center h4"> Réels</div>
 
 
             <div> Type de mission :</div>
