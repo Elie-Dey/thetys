@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -60,5 +59,6 @@
     <!-- Custom styles for this template -->
     <link href="../../css/header-navbar.css" rel="stylesheet" />
     <link href="../../css/modules.css" rel="stylesheet" />
+    <script src="../../js/link-active.js"></script>
   </head>
   <body>

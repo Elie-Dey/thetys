@@ -9,6 +9,17 @@
   }
 
    </style>
+
+<script>
+
+$(document).ready(function(){
+        var i = document.location.href.lastIndexOf("/");
+        var currentPHP = document.location.href.substr(i+1);
+        $("ul#main-menu li a").removeClass('active');
+        $("ul#main-menu li a[href^='"+currentPHP+"']").addClass('active');
+  });
+
+</script>
    <nav
           id="sidebarMenu"
           class="col-md-3 col-lg-2 d-md-block bg-light sidebar mt-5 collapse"

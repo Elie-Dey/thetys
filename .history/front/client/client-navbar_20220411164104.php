@@ -1,10 +1,11 @@
 <?php
-
-//Script de gestion de la couleur de la page active
-function PageName() {
-  return substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
-} 
-$currentPage = PageName();
+function active($currect_page){
+  $url_array =  explode('/', $_SERVER['REQUEST_URI']) ;
+  $url = end($url_array);  
+  if($currect_page == $url){
+      echo 'active'; //class name in css 
+  } 
+}
 ?>
 
 <style>
@@ -26,7 +27,7 @@ $currentPage = PageName();
             <ul class="nav flex-column">
               <li class="nav-item">
                 <a
-                  class=" <?php if ($currentPage == "acceuil.php") echo "active"; ?> nav-link fs-5"
+                  class="nav-link fs-5"
                   aria-current="page"
                   href="../accueil/accueil.php"
                   
@@ -41,23 +42,17 @@ $currentPage = PageName();
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link <?php if ($currentPage == "creationdemande.php") echo "active"; ?>  fs-5" href="../client/creationdemande.php">
+                <a class="nav-link  active fs-5" href="../client/creationdemande.php">
                   <span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus-fill" viewBox="0 0 16 16">
   <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z"/>
 </svg>
                   </span>
                   Nouvelle demande
-
-               
                 </a>
               </li>
               <li class="nav-item">
-                <a class=" <?php
-                 if ($currentPage == "listedemande.php") echo "active"; 
-                  if ($currentPage == "detaildemande.php") echo "active"; 
-                
-                ?> nav-link fs-5" href="../client/listedemande.php">
+                <a class="nav-link fs-5" href="../client/listedemande.php">
                   <span >
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
   <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
@@ -67,12 +62,7 @@ $currentPage = PageName();
                 </a>
               </li>
               <li class="nav-item">
-                <a class=" <?php 
-                  if ($currentPage == "listedevis.php") echo "active"; 
-                   if ($currentPage == "detaildevis.php")  echo "active";
-                  
-                  ?> 
-                  nav-link fs-5  " href="../client/listedevis.php">
+                <a class="nav-link fs-5" href="../client/listedevis.php">
                   <span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-wallet-fill" viewBox="0 0 16 16">
   <path d="M1.5 2A1.5 1.5 0 0 0 0 3.5v2h6a.5.5 0 0 1 .5.5c0 .253.08.644.306.958.207.288.557.542 1.194.542.637 0 .987-.254 1.194-.542.226-.314.306-.705.306-.958a.5.5 0 0 1 .5-.5h6v-2A1.5 1.5 0 0 0 14.5 2h-13z"/>
@@ -83,12 +73,7 @@ $currentPage = PageName();
                 </a>
               </li>
               <li class="nav-item">
-                <a class=" <?php 
-                  if ($currentPage == "listepv.php")  echo "active";  
-                   if ($currentPage == "detailpv.php")  echo "active";
-                   if ($currentPage == "signaturepv.php")  echo "active";
-                
-                    ?> nav-link fs-5" href="../client/listepv.php">
+                <a class="nav-link fs-5" href="../client/listepv.php">
                   <span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
   <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>

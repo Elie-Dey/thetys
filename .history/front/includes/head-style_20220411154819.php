@@ -60,5 +60,19 @@
     <!-- Custom styles for this template -->
     <link href="../../css/header-navbar.css" rel="stylesheet" />
     <link href="../../css/modules.css" rel="stylesheet" />
+
+    <script>
+
+var center = document.getElementsByClassName("fs-5");
+for (let i = 0; i < center.length; i++) {
+  center[i].addEventListener("click", function (e) {
+    for (let i = 0; i < center.length; i++) {
+      center[i].classList.remove("active");
+      e.target.classList.add("active");
+    }
+  });
+}
+
+</script>
   </head>
   <body>

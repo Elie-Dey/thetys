@@ -9,6 +9,19 @@
   }
 
    </style>
+
+<script>
+ var center = document.getElementsByClassName("nav-link");
+  for (let i = 0; i < center.length; i++) {
+    center[i].addEventListener("click", function(e){
+      for (let i = 0; i < center.length; i++) {
+         center[i].classList.remove('active');
+         e.target.classList.add('active');
+      }
+    })
+  }
+
+</script>
    <nav
           id="sidebarMenu"
           class="col-md-3 col-lg-2 d-md-block bg-light sidebar mt-5 collapse"

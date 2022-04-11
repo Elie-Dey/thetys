@@ -1,6 +1,4 @@
 <?php
-
-//Script de gestion de la couleur de la page active
 function PageName() {
   return substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
 } 
