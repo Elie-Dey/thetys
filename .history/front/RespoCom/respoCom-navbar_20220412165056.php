@@ -33,7 +33,7 @@ $currentPage = PageName();
 
                 ?> 
                   
-                  nav-link  fs-5"
+                  nav-link active fs-5"
                   aria-current="page"
                   href="../accueil/accueil.php"
                   
@@ -51,7 +51,8 @@ $currentPage = PageName();
                 <a class="
                 <?php 
                 if ($currentPage == "listedemandes.php") echo "active"; 
-                 if ($currentPage == "detaildemande.php") echo "active"; 
+                 if ($currentPage == "detaildemandedevis.php") echo "active"; 
+                  if ($currentPage == "evaluationdemande.php") echo "active"; 
 
                 ?> 
                 nav-link fs-5" href="../RespoCom/listedemandes.php">
@@ -69,7 +70,8 @@ $currentPage = PageName();
                 <a class="
                 <?php 
                 if ($currentPage == "listecommandes.php") echo "active"; 
-                 if ($currentPage == "detailcommande.php") echo "active"; 
+                 if ($currentPage == "detaildemandedevis.php") echo "active"; 
+                  if ($currentPage == "evaluationdemande.php") echo "active"; 
 
                 ?> 
                 nav-link fs-5" href="../RespoCom/listecommandes.php">
@@ -84,7 +86,8 @@ $currentPage = PageName();
               <li class="nav-item">
                 <a class="<?php 
                 if ($currentPage == "listedevis.php") echo "active"; 
-                 if ($currentPage == "detaildevis.php") echo "active";  
+                 if ($currentPage == "detaildemandedevis.php") echo "active"; 
+                  if ($currentPage == "evaluationdemande.php") echo "active"; 
 
                 ?> 
 

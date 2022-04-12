@@ -99,7 +99,7 @@ $currentPage = PageName();
                    <?php 
                 if ($currentPage == "listepvequipe.php") echo "active"; 
                 if ($currentPage == "detailpvequipe.php") echo "active"; 
-                if ($currentPage == "validationpvequipe.php") echo "active"; 
+
                 ?>
                   nav-link fs-5"
                   aria-current="page"

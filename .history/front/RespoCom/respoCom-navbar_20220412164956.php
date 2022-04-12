@@ -33,7 +33,7 @@ $currentPage = PageName();
 
                 ?> 
                   
-                  nav-link  fs-5"
+                  nav-link active fs-5"
                   aria-current="page"
                   href="../accueil/accueil.php"
                   
@@ -48,13 +48,7 @@ $currentPage = PageName();
                 </a>
               </li>
               <li class="nav-item">
-                <a class="
-                <?php 
-                if ($currentPage == "listedemandes.php") echo "active"; 
-                 if ($currentPage == "detaildemande.php") echo "active"; 
-
-                ?> 
-                nav-link fs-5" href="../RespoCom/listedemandes.php">
+                <a class="nav-link fs-5" href="../RespoCom/listedemandes.php">
                   <span>
                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list-task" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5H2zM3 3H2v1h1V3z"/>
@@ -66,13 +60,7 @@ $currentPage = PageName();
                 </a>
               </li>
               <li class="nav-item">
-                <a class="
-                <?php 
-                if ($currentPage == "listecommandes.php") echo "active"; 
-                 if ($currentPage == "detailcommande.php") echo "active"; 
-
-                ?> 
-                nav-link fs-5" href="../RespoCom/listecommandes.php">
+                <a class="nav-link fs-5" href="../RespoCom/listecommandes.php">
                   <span >
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
   <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
@@ -82,13 +70,7 @@ $currentPage = PageName();
                 </a>
               </li>
               <li class="nav-item">
-                <a class="<?php 
-                if ($currentPage == "listedevis.php") echo "active"; 
-                 if ($currentPage == "detaildevis.php") echo "active";  
-
-                ?> 
-
-                nav-link fs-5" href="../RespoCom/listedevis.php">
+                <a class="nav-link fs-5" href="../RespoCom/listedevis.php">
                   <span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-wallet-fill" viewBox="0 0 16 16">
   <path d="M1.5 2A1.5 1.5 0 0 0 0 3.5v2h6a.5.5 0 0 1 .5.5c0 .253.08.644.306.958.207.288.557.542 1.194.542.637 0 .987-.254 1.194-.542.226-.314.306-.705.306-.958a.5.5 0 0 1 .5-.5h6v-2A1.5 1.5 0 0 0 14.5 2h-13z"/>

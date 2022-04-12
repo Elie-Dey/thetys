@@ -79,7 +79,6 @@ $currentPage = PageName();
                 <a class="  
                  <?php 
                 if ($currentPage == "listemission.php") echo "active"; 
-                if ($currentPage == "detailmission.php") echo "active"; 
 
                 ?>
                 nav-link fs-5" href="../respoTech/listemission.php">
@@ -98,8 +97,7 @@ $currentPage = PageName();
                   class="
                    <?php 
                 if ($currentPage == "listepvequipe.php") echo "active"; 
-                if ($currentPage == "detailpvequipe.php") echo "active"; 
-                if ($currentPage == "validationpvequipe.php") echo "active"; 
+
                 ?>
                   nav-link fs-5"
                   aria-current="page"

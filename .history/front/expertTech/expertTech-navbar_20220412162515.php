@@ -25,7 +25,7 @@ $currentPage = PageName();
             <ul class="nav flex-column">
               <li class="nav-item">
                 <a
-                  class=" <?php if ($currentPage == "acceuil.php") echo "active"; ?> nav-link fs-5"
+                  class="nav-link active fs-5"
                   aria-current="page"
                   href="../accueil/accueil.php"
                   
@@ -40,12 +40,7 @@ $currentPage = PageName();
                 </a>
               </li>
               <li class="nav-item">
-                <a class=" <?php
-                 if ($currentPage == "listefichemissions.php") echo "active"; 
-                 if ($currentPage == "creationpvmission.php") echo "active"; 
-                  if ($currentPage == "detailfichemissions.php") echo "active";
-                 
-                 ?> nav-link fs-5" href="../expertTech/listefichemissions.php">
+                <a class="nav-link fs-5" href="../expertTech/listefichemissions.php">
                   <span >
                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list-task" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5H2zM3 3H2v1h1V3z"/>
@@ -57,13 +52,7 @@ $currentPage = PageName();
                 </a>
               </li>
               <li class="nav-item">
-                <a class=" <?php
-                 if ($currentPage == "listepvmissions.php") echo "active"; 
-                  if ($currentPage == "detailpv.php") echo "active"; 
-                 
-                 
-                 ?> 
-                nav-link fs-5" href="../expertTech/listepvmissions.php">
+                <a class="nav-link fs-5" href="../expertTech/listepvmissions.php">
                   <span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
   <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>

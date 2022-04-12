@@ -44,8 +44,6 @@ $currentPage = PageName();
               <li class="nav-item">
                 <a class=" <?php 
                 if ($currentPage == "listedemandedevis.php") echo "active"; 
-                 if ($currentPage == "detaildemandedevis.php") echo "active"; 
-                  if ($currentPage == "evaluationdemande.php") echo "active"; 
 
                 ?> 
                 nav-link fs-5" href="../respoTech/listedemandedevis.php">
@@ -63,7 +61,6 @@ $currentPage = PageName();
                 <a class=" 
                 <?php 
                 if ($currentPage == "listecommande.php") echo "active"; 
-                if ($currentPage == "fichemission.php") echo "active"; 
 
                 ?>  
                 nav-link fs-5" href="../respoTech/listecommande.php">
@@ -79,7 +76,6 @@ $currentPage = PageName();
                 <a class="  
                  <?php 
                 if ($currentPage == "listemission.php") echo "active"; 
-                if ($currentPage == "detailmission.php") echo "active"; 
 
                 ?>
                 nav-link fs-5" href="../respoTech/listemission.php">
@@ -98,8 +94,7 @@ $currentPage = PageName();
                   class="
                    <?php 
                 if ($currentPage == "listepvequipe.php") echo "active"; 
-                if ($currentPage == "detailpvequipe.php") echo "active"; 
-                if ($currentPage == "validationpvequipe.php") echo "active"; 
+
                 ?>
                   nav-link fs-5"
                   aria-current="page"
@@ -116,12 +111,7 @@ $currentPage = PageName();
               </li>
               <li class="nav-item">
                 <a
-                  class="
-                   <?php 
-                if ($currentPage == "listeequipes.php") echo "active"; 
-
-                ?>
-                  nav-link fs-5"
+                  class="nav-link fs-5"
                   aria-current="page"
                  href="../respoTech/listeequipes.php"
                   
@@ -138,12 +128,7 @@ $currentPage = PageName();
               </li>
                <li class="nav-item">
                 <a
-                  class="
-                   <?php 
-                if ($currentPage == "listemateriels.php") echo "active"; 
-
-                ?>
-                  nav-link fs-5"
+                  class="nav-link fs-5"
                   aria-current="page"
                  href="../respoTech/listemateriels.php"
                   

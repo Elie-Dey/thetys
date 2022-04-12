@@ -43,7 +43,6 @@ $currentPage = PageName();
                 <a class=" <?php
                  if ($currentPage == "listefichemissions.php") echo "active"; 
                  if ($currentPage == "creationpvmission.php") echo "active"; 
-                  if ($currentPage == "detailfichemissions.php") echo "active";
                  
                  ?> nav-link fs-5" href="../expertTech/listefichemissions.php">
                   <span >

@@ -40,12 +40,7 @@ $currentPage = PageName();
                 </a>
               </li>
               <li class="nav-item">
-                <a class=" <?php
-                 if ($currentPage == "listefichemissions.php") echo "active"; 
-                 if ($currentPage == "creationpvmission.php") echo "active"; 
-                  if ($currentPage == "detailfichemissions.php") echo "active";
-                 
-                 ?> nav-link fs-5" href="../expertTech/listefichemissions.php">
+                <a class=" <?php if ($currentPage == "listefichemissions.php") echo "active"; ?> nav-link fs-5" href="../expertTech/listefichemissions.php">
                   <span >
                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list-task" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5H2zM3 3H2v1h1V3z"/>
@@ -59,7 +54,8 @@ $currentPage = PageName();
               <li class="nav-item">
                 <a class=" <?php
                  if ($currentPage == "listepvmissions.php") echo "active"; 
-                  if ($currentPage == "detailpv.php") echo "active"; 
+                 if ($currentPage == "detailfichemissions.php") echo "active"; 
+                 if ($currentPage == "creationpvmission.php") echo "active"; 
                  
                  
                  ?> 

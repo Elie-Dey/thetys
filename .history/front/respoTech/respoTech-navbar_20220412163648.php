@@ -42,13 +42,7 @@ $currentPage = PageName();
                 </a>
               </li>
               <li class="nav-item">
-                <a class=" <?php 
-                if ($currentPage == "listedemandedevis.php") echo "active"; 
-                 if ($currentPage == "detaildemandedevis.php") echo "active"; 
-                  if ($currentPage == "evaluationdemande.php") echo "active"; 
-
-                ?> 
-                nav-link fs-5" href="../respoTech/listedemandedevis.php">
+                <a class="nav-link fs-5" href="../respoTech/listedemandedevis.php">
                   <span>
                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list-task" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5H2zM3 3H2v1h1V3z"/>
@@ -60,13 +54,7 @@ $currentPage = PageName();
                 </a>
               </li>
               <li class="nav-item">
-                <a class=" 
-                <?php 
-                if ($currentPage == "listecommande.php") echo "active"; 
-                if ($currentPage == "fichemission.php") echo "active"; 
-
-                ?>  
-                nav-link fs-5" href="../respoTech/listecommande.php">
+                <a class="nav-link fs-5" href="../respoTech/listecommande.php">
                   <span >
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
   <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
@@ -76,13 +64,7 @@ $currentPage = PageName();
                 </a>
               </li>
               <li class="nav-item">
-                <a class="  
-                 <?php 
-                if ($currentPage == "listemission.php") echo "active"; 
-                if ($currentPage == "detailmission.php") echo "active"; 
-
-                ?>
-                nav-link fs-5" href="../respoTech/listemission.php">
+                <a class="nav-link fs-5" href="../respoTech/listemission.php">
                   <span>
                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-send-check-fill" viewBox="0 0 16 16">
   <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 1.59 2.498C8 14 8 13 8 12.5a4.5 4.5 0 0 1 5.026-4.47L15.964.686Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"/>
@@ -95,13 +77,7 @@ $currentPage = PageName();
 
               <li class="nav-item">
                 <a
-                  class="
-                   <?php 
-                if ($currentPage == "listepvequipe.php") echo "active"; 
-                if ($currentPage == "detailpvequipe.php") echo "active"; 
-                if ($currentPage == "validationpvequipe.php") echo "active"; 
-                ?>
-                  nav-link fs-5"
+                  class="nav-link fs-5"
                   aria-current="page"
                   href="../respoTech/listepvequipe.php"
                   
@@ -116,12 +92,7 @@ $currentPage = PageName();
               </li>
               <li class="nav-item">
                 <a
-                  class="
-                   <?php 
-                if ($currentPage == "listeequipes.php") echo "active"; 
-
-                ?>
-                  nav-link fs-5"
+                  class="nav-link fs-5"
                   aria-current="page"
                  href="../respoTech/listeequipes.php"
                   
@@ -138,12 +109,7 @@ $currentPage = PageName();
               </li>
                <li class="nav-item">
                 <a
-                  class="
-                   <?php 
-                if ($currentPage == "listemateriels.php") echo "active"; 
-
-                ?>
-                  nav-link fs-5"
+                  class="nav-link fs-5"
                   aria-current="page"
                  href="../respoTech/listemateriels.php"
                   
