@@ -1,19 +1,19 @@
 <?php 
 //Definition du titre de la page 
-$titre = "Nouvelle demande";
+$titre = "Détails facture";
 @include "../includes/head-style.php";
 @include "../includes/header.php";
 ?>
 
 <div class="container-fluid">
       <div class="row">
-      <?php  @include "../client/client-navbar.php";  ?>
+      <?php  @include "../direcFin/direcfin-navbar.php";  ?>
       
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 pt-5">
 
 
           <form class="row g-3 border border-2 rounded mb-3 shadow-lg p-3 mb-5 bg-body rounded">
-            <legend class="text-center"> Formulaire nouvelle demande</legend>
+            <legend class="text-center"> Details de la facture</legend>
             <div class="col-md-6">
               <label for="nom" class="form-label">Nom Client</label>
               <input type="text" class="form-control" id="nom" />
@@ -76,33 +76,49 @@ $titre = "Nouvelle demande";
               />
             </div>
             <div class="form-floating">
-  <textarea class="form-control"  id="besoins" style="height: 100px"></textarea>
-  <label for="besoins">Besoins</label>
-</div>
-<div class="form-floating">
-  <textarea class="form-control" id="conditionsParticulieres" style="height: 100px"></textarea>
-  <label for="conditionsParticulieres">Condition particulières</label>
-</div>
-            
-            <div class="col-md-6">
-              <label for="materiel1" class="form-label">Matériel 1</label>
-              <select id="materiel1" class="form-select">
-                <option selected>Choose...</option>
-                <option>...</option>
-              </select>
+            <textarea class="form-control"  id="equipeMobilisee" style="height: 100px"></textarea>
+                <label for="equipeMobilisee">Equipe mobilisée</label>
             </div>
-            <div class="col-md-6">
-              <label for="materiel2" class="form-label">Matériel 2</label>
-              <select id="materiel2" class="form-select">
-                <option selected>Choose...</option>
-                <option>...</option>
-              </select>
+            <div class="form-floating">
+                 <textarea class="form-control" id="materielSupport" style="height: 100px"></textarea>
+                 <label for="materielSupport">Matériel supports</label>
             </div>
-          <div class="col-6">
-              <input class="btn btn-danger m-3 d-grid gap-2 col-6 mx-auto" type="submit" name="annulerDemande" value="Annuler ma demande "> 
+            <div class="col-4">
+              <label for="interventionHumaine" class="form-label">Intervention Humaine </label>
+              <input
+                type="text"
+                class="form-control"
+                id="interventionHumaine"
+                placeholder=""
+                value=" <?php  echo "la vie est belle";?>"
+              />
+            </div>
+            <div class="col-4">
+              <label for="materiel" class="form-label"> Matériel</label>
+              <input
+                type="text"
+                class="form-control"
+                id="materiel"
+              />
+            </div>
+            <div class="col-4">
+              <label for="tva" class="form-label"> TVA</label>
+              <input
+                type="text"
+                class="form-control"
+                id="tva"
+              />
+            </div>
+            <div class="col-12">
+              <label for="totalttc" class="form-label"> Total TTC</label>
+              <input
+                type="text"
+                class="form-control"
+                id="totalttc"
+              />
             </div>
             <div class="col-6">
-              <input class="btn btn-primary m-3 d-grid gap-2 col-6 mx-auto" type="submit" name="envoiDemande" value="Envoyer ma demande "> 
+              <input class="btn btn-primary m-3 d-grid gap-2 col-6 mx-auto" type="submit" name="genererFactutre" value="Générer"> 
             </div>
           </form>
         </main>
