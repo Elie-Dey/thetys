@@ -25,33 +25,33 @@ $titre = "Liste des matériels";
   <tbody>
     <?php 
       @require '../../back/admin.php';
+      $db = DataBase::connect();
+      $statement = $db->query('SELECT *  FROM materiels 
+                              INNER JOIN siteStockages
+                              ON materiels.siteStockages_id = siteStockages.id');
+      $count =0;
 
-      $sql = "SELECT materiels.nom,materiels.coutLocation,materiels.coutLocation, materiels.coutExpedition, materiels.stock, materiels.statut, sitestockages.nomSite
-              FROM `materiels`
-              INNER JOIN `sitestockages`
-              ON materiels.siteStockage_id = sitestockages.idsiteStockage;d";
-
-     $requete = $db->query($sql);
-      $count = 0;
-
-     if($requete != FALSE ){
-        $materiels = $requete->fetchAll(PDO::FETCH_ASSOC);
-        foreach($materiels as $materiel) : 
-         $count++;
+      while($item = $statement->fetch()){
+        $count++;
+        echo " <tr>";
+        echo '<th scope="row">'.$count.'</th>';
+        echo "<td>".$item['nom']."<td>";
+        echo "<td>".$item['']."<td>";
+        echo "<td>".$item['nom']."<td>";
+      
+      }
+    
     ?>
     <tr>
-      <th scope="row"><?= $count ?></th>
-      <td><?= $materiel['nom'] ?> </td>
-      <td><?= $materiel['nomSite'] ?></td>
-       <td><?= $materiel['coutLocation'] ?></td>
-       <td><?=  $materiel['coutExpedition'] ?></td>
-       <td><?= $materiel['stock'] ?></td>
-      <td><?= $materiel['statut'] ?></td>
+      <th scope="row">1</th>
+      <td>AIRBLIOBASE  </td>
+      <td>Marseille</td>
+       <td>8 000 €</td>
+       <td>8 000 €</td>
+       <td>50</td>
+      <td>Non disponible</td>
     </tr>
-   <?php endforeach; 
-     }
-  ?>
-    
+   
   </tbody>
 </table>
 </main>

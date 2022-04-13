@@ -21,34 +21,31 @@ $titre = "Liste des équipes";
     </tr>
   </thead>
   <tbody>
-    <?php 
+     <?php 
       @require '../../back/admin.php';
 
-      $sql = "SELECT * 
-              FROM equipes 
-              INNER JOIN membreequipe
-              ON equipes.idequipes = membreequipe.equipe_id
-              WHERE nomEquipe = membreequipe.nom";
+      $sql = "SELECT materiels.nom,materiels.coutLocation,materiels.coutLocation, materiels.coutExpedition, materiels.stock, materiels.statut, sitestockages.nomSite
+              FROM `materiels`
+              INNER JOIN `sitestockages`
+              ON materiels.siteStockage_id = sitestockages.idsiteStockage;d";
 
      $requete = $db->query($sql);
       $count = 0;
 
      if($requete != FALSE ){
-        $equipes = $requete->fetchAll(PDO::FETCH_ASSOC);
-        foreach($equipes as $equipe) : 
+        $materiels = $requete->fetchAll(PDO::FETCH_ASSOC);
+        foreach($materiels as $materiel) : 
          $count++;
     ?>
     <tr>
-      <th scope="row"><?= $count ?></th>
-      <td><?= $equipe['nomEquipe'] ?> </td>
-      <td><?= $equipe['nom']." ".$equipe['prenom'] ?></td>
-       <td><?= $equipe['localisation'] ?></td>
-       <td><?=  $equipe['statut'] ?></td>
+    <tr>
+      <th scope="row">1</th>
+      <td>Equipe 3 </td>
+       <td>TOUB Aziz</td>
+      <td>Maeseille</td>
+      <td>Non disponible</td>
     </tr>
-   <?php endforeach; 
-     }
-  ?>
-  
+   
   </tbody>
 </table>
 </main>

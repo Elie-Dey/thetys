@@ -26,32 +26,47 @@ $titre = "Liste des matériels";
     <?php 
       @require '../../back/admin.php';
 
-      $sql = "SELECT materiels.nom,materiels.coutLocation,materiels.coutLocation, materiels.coutExpedition, materiels.stock, materiels.statut, sitestockages.nomSite
-              FROM `materiels`
-              INNER JOIN `sitestockages`
-              ON materiels.siteStockage_id = sitestockages.idsiteStockage;d";
+      $sql = "SELECT *  FROM `materiels` 
+              INNER JOIN `siteStockages`
+              ON materiels.siteStockages_id = siteStockages.id";
 
-     $requete = $db->query($sql);
+    $materiels
+     if($requete = $db->query($sql)){
+        $materiels = $requete->fetchAll(PDO::FETCH_ASSOC);
+        print_r($materiels);
+     }
+      //On recupere les données (fetch ou fetchAll)
+
+      //  $materiels = $requete->fetchAll(PDO::FETCH_ASSOC);
+      // $clients = $requete->fetchAll(PDO::FETCH_ASSOC);
+  
       $count = 0;
 
-     if($requete != FALSE ){
-        $materiels = $requete->fetchAll(PDO::FETCH_ASSOC);
-        foreach($materiels as $materiel) : 
+      // foreach ($materiels as $materiel) {
+      //  $count++;
+      //   echo " <tr>";
+      //   echo '<th scope="row">'.$count.'</th>';
+      //   echo "<td>".$item['materiels.nom']."<td>";
+      //   echo "<td>".$item['coutLocation']."<td>";
+      //   echo "<td>".$item['coutExpedition']."<td>";
+      //   echo "<td>".$item['stock']."<td>";
+      //   echo "<td>".$item['status']."<td>";
+      //   echo "</tr>";
+      // }
+    ?>
+    <?php foreach($materiels as $materiel) : 
          $count++;
     ?>
     <tr>
       <th scope="row"><?= $count ?></th>
       <td><?= $materiel['nom'] ?> </td>
-      <td><?= $materiel['nomSite'] ?></td>
+      <td>Marseille</td>
        <td><?= $materiel['coutLocation'] ?></td>
        <td><?=  $materiel['coutExpedition'] ?></td>
        <td><?= $materiel['stock'] ?></td>
       <td><?= $materiel['statut'] ?></td>
     </tr>
-   <?php endforeach; 
-     }
-  ?>
-    
+   <?php endforeach; ?>
   </tbody>
 </table>
 </main>

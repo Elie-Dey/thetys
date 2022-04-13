@@ -1,6 +1,6 @@
 <?php 
 //Definition du titre de la page 
-$titre = "Liste des équipes";
+$titre = "Liste des matériels";
 @include "../includes/head-style.php";
 @include "../includes/header.php";
 ?>
@@ -14,41 +14,44 @@ $titre = "Liste des équipes";
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Nom Equipe</th>
-      <th scope="col">Responsable Equipe</th>
+      <th scope="col">Nom matériel</th>
       <th scope="col">Localisation </th>
-      <th scope="col">Statut</th>
+      <th scope="col">Coût location</th>
+      <th scope="col">Coût expedition</th>
+    <th scope="col">Stock</th>
+    <th scope="col">Statut</th>
     </tr>
   </thead>
   <tbody>
     <?php 
       @require '../../back/admin.php';
 
-      $sql = "SELECT * 
-              FROM equipes 
-              INNER JOIN membreequipe
-              ON equipes.idequipes = membreequipe.equipe_id
-              WHERE nomEquipe = membreequipe.nom";
+      $sql = "SELECT *  FROM `materiels` 
+              LEFT JOIN `siteStockages`
+              ON materiels.siteStockages_id = siteStockages.id";
 
      $requete = $db->query($sql);
       $count = 0;
+     $materiels = [];
 
      if($requete != FALSE ){
-        $equipes = $requete->fetchAll(PDO::FETCH_ASSOC);
-        foreach($equipes as $equipe) : 
+        $materiels = $requete->fetchAll(PDO::FETCH_COLUMN);
+        foreach($materiels as $materiel) : 
          $count++;
     ?>
     <tr>
       <th scope="row"><?= $count ?></th>
-      <td><?= $equipe['nomEquipe'] ?> </td>
-      <td><?= $equipe['nom']." ".$equipe['prenom'] ?></td>
-       <td><?= $equipe['localisation'] ?></td>
-       <td><?=  $equipe['statut'] ?></td>
+      <td><?= $materiel['nom'] ?> </td>
+      <td>Marseille</td>
+       <td><?= $materiel['coutLocation'] ?></td>
+       <td><?=  $materiel['coutExpedition'] ?></td>
+       <td><?= $materiel['stock'] ?></td>
+      <td><?= $materiel['statut'] ?></td>
     </tr>
    <?php endforeach; 
      }
   ?>
-  
+    
   </tbody>
 </table>
 </main>

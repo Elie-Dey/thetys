@@ -1,7 +1,5 @@
  <?php
- 
- session_start();
- //Reload la page chaque une minute pour avoir l'heure à jour
+  //Reload la page chaque une minute pour avoir l'heure à jour
     $url1=$_SERVER['REQUEST_URI'];
     header("Refresh: 60; URL=$url1");
 ?>
@@ -47,7 +45,7 @@
       </div>
       <div class="navbar-nav">
         <div class="nav-item text-nowrap d-flex">
-          <a class="text-decoration-none text-light px-3 mt-4" href="#"><?= $_SESSION['nom']." ".$_SESSION['prenom'] ?></a>
+          <a class="text-decoration-none text-light px-3 mt-4" href="#">Gagnat Paul</a>
         </div>
       </div>
       <div class="navbar-nav">

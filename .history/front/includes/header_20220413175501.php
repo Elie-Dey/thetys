@@ -47,7 +47,7 @@
       </div>
       <div class="navbar-nav">
         <div class="nav-item text-nowrap d-flex">
-          <a class="text-decoration-none text-light px-3 mt-4" href="#"><?= $_SESSION['nom']." ".$_SESSION['prenom'] ?></a>
+          <a class="text-decoration-none text-light px-3 mt-4" href="#">Gagnat Paul</a>
         </div>
       </div>
       <div class="navbar-nav">

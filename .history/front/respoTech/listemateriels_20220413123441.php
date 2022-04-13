@@ -36,6 +36,7 @@ $titre = "Liste des matériels";
 
      if($requete != FALSE ){
         $materiels = $requete->fetchAll(PDO::FETCH_ASSOC);
+        print_r($materiels);
         foreach($materiels as $materiel) : 
          $count++;
     ?>

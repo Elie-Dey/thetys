@@ -24,31 +24,38 @@ $titre = "Liste des équipes";
     <?php 
       @require '../../back/admin.php';
 
-      $sql = "SELECT * 
-              FROM equipes 
-              INNER JOIN membreequipe
-              ON equipes.idequipes = membreequipe.equipe_id
-              WHERE nomEquipe = membreequipe.nom";
+      $sql = "SELECT *
+              FROM `equipes`";
 
      $requete = $db->query($sql);
       $count = 0;
 
      if($requete != FALSE ){
-        $equipes = $requete->fetchAll(PDO::FETCH_ASSOC);
-        foreach($equipes as $equipe) : 
+        $materiels = $requete->fetchAll(PDO::FETCH_ASSOC);
+        foreach($materiels as $materiel) : 
          $count++;
     ?>
     <tr>
       <th scope="row"><?= $count ?></th>
-      <td><?= $equipe['nomEquipe'] ?> </td>
-      <td><?= $equipe['nom']." ".$equipe['prenom'] ?></td>
-       <td><?= $equipe['localisation'] ?></td>
-       <td><?=  $equipe['statut'] ?></td>
+      <td><?= $materiel['nom'] ?> </td>
+      <td><?= $materiel['nomSite'] ?></td>
+       <td><?= $materiel['coutLocation'] ?></td>
+       <td><?=  $materiel['coutExpedition'] ?></td>
+       <td><?= $materiel['stock'] ?></td>
+      <td><?= $materiel['statut'] ?></td>
     </tr>
    <?php endforeach; 
      }
   ?>
-  
+    
+    <tr>
+      <th scope="row">1</th>
+      <td>Equipe 3 </td>
+       <td>TOUB Aziz</td>
+      <td>Maeseille</td>
+      <td>Non disponible</td>
+    </tr>
+   
   </tbody>
 </table>
 </main>

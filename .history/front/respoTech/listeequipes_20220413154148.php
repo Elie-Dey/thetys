@@ -48,7 +48,15 @@ $titre = "Liste des équipes";
    <?php endforeach; 
      }
   ?>
-  
+    
+    <!-- <tr>
+      <th scope="row">1</th>
+      <td>Equipe 3 </td>
+       <td>TOUB Aziz</td>
+      <td>Maeseille</td>
+      <td>Non disponible</td>
+    </tr> -->
+   
   </tbody>
 </table>
 </main>

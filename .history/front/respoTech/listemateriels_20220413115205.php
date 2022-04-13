@@ -26,32 +26,32 @@ $titre = "Liste des matériels";
     <?php 
       @require '../../back/admin.php';
 
-      $sql = "SELECT materiels.nom,materiels.coutLocation,materiels.coutLocation, materiels.coutExpedition, materiels.stock, materiels.statut, sitestockages.nomSite
-              FROM `materiels`
-              INNER JOIN `sitestockages`
-              ON materiels.siteStockage_id = sitestockages.idsiteStockage;d";
+      $sql = "SELECT *  FROM `materiels` 
+              LEFT JOIN `siteStockages`
+              ON materiels.siteStockages_id = siteStockages.id";
 
      $requete = $db->query($sql);
-      $count = 0;
+     $materiels = [];
 
-     if($requete != FALSE ){
-        $materiels = $requete->fetchAll(PDO::FETCH_ASSOC);
-        foreach($materiels as $materiel) : 
+     
+        $materiels = $requete->fetchAll(PDO::FETCH_COLUMN);
+    
+    $count = 0;
+
+
+    foreach($materiels as $materiel) : 
          $count++;
     ?>
     <tr>
       <th scope="row"><?= $count ?></th>
       <td><?= $materiel['nom'] ?> </td>
-      <td><?= $materiel['nomSite'] ?></td>
+      <td>Marseille</td>
        <td><?= $materiel['coutLocation'] ?></td>
        <td><?=  $materiel['coutExpedition'] ?></td>
        <td><?= $materiel['stock'] ?></td>
       <td><?= $materiel['statut'] ?></td>
     </tr>
-   <?php endforeach; 
-     }
-  ?>
-    
+   <?php endforeach; ?>
   </tbody>
 </table>
 </main>

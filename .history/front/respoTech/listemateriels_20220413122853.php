@@ -35,14 +35,14 @@ $titre = "Liste des matériels";
       $count = 0;
 
      if($requete != FALSE ){
-        $materiels = $requete->fetchAll(PDO::FETCH_ASSOC);
+        $materiels = $requete->fetchAll(PDO::FETCH_COLUMN);
         foreach($materiels as $materiel) : 
          $count++;
     ?>
     <tr>
       <th scope="row"><?= $count ?></th>
       <td><?= $materiel['nom'] ?> </td>
-      <td><?= $materiel['nomSite'] ?></td>
+      <td>Marseille</td>
        <td><?= $materiel['coutLocation'] ?></td>
        <td><?=  $materiel['coutExpedition'] ?></td>
        <td><?= $materiel['stock'] ?></td>
