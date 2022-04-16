@@ -34,12 +34,10 @@ if(!empty($_POST)){
         $requete = $db->query($sql);
         $utilisateur = $requete->fetch(PDO::FETCH_ASSOC);
         $nomUtilisateur = $utilisateur['nom'];
-        $prenomUtilisateur = $utilisateur['prenom'];
         $rows = $requete->rowCount();
 
         if($rows==1){
             $_SESSION['nom'] = $nomUtilisateur;
-            $_SESSION['prenom'] = $prenomUtilisateur;
             header("Location:../../front\direcFin\creationfacture.php ");
         }
     }
@@ -52,49 +50,11 @@ if(!empty($_POST)){
         $requete = $db->query($sql);
         $utilisateur = $requete->fetch(PDO::FETCH_ASSOC);
         $nomUtilisateur = $utilisateur['nom'];
-        $prenomUtilisateur = $utilisateur['prenom'];
         $rows = $requete->rowCount();
 
         if($rows==1){
             $_SESSION['nom'] = $nomUtilisateur;
-            $_SESSION['prenom'] = $prenomUtilisateur;
-            header("Location:../../front\RespoCom\listedemandes.php ");
-        }
-    }
-
-    if($codeIdentification == "EQ"){
-        $sql = "SELECT * 
-              FROM utilisateurs
-              WHERE idConnexion = '$identifiant'";
-
-        $requete = $db->query($sql);
-        $utilisateur = $requete->fetch(PDO::FETCH_ASSOC);
-        $nomUtilisateur = $utilisateur['nom'];
-        $prenomUtilisateur = $utilisateur['prenom'];
-        $rows = $requete->rowCount();
-
-        if($rows==1){
-            $_SESSION['nom'] = $nomUtilisateur;
-            $_SESSION['prenom'] = $prenomUtilisateur;
-            header("Location:../../front/expertTech\listefichemissions.php ");
-        }
-    }
-
-    if($codeIdentification == "TE"){
-        $sql = "SELECT * 
-              FROM utilisateurs
-              WHERE idConnexion = '$identifiant'";
-
-        $requete = $db->query($sql);
-        $utilisateur = $requete->fetch(PDO::FETCH_ASSOC);
-        $nomUtilisateur = $utilisateur['nom'];
-        $prenomUtilisateur = $utilisateur['prenom'];
-        $rows = $requete->rowCount();
-
-        if($rows==1){
-            $_SESSION['nom'] = $nomUtilisateur;
-            $_SESSION['prenom'] = $prenomUtilisateur;
-            header("Location:../../front/respoTech\listedemandedevis.php ");
+            header("Location:../../front\RespoCom\listdemandes.php ");
         }
     }
 

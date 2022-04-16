@@ -76,7 +76,7 @@ if(!empty($_POST)){
         if($rows==1){
             $_SESSION['nom'] = $nomUtilisateur;
             $_SESSION['prenom'] = $prenomUtilisateur;
-            header("Location:../../front/expertTech\listefichemissions.php ");
+            header("Location:../../front\expertTech\listefichemissions.php ");
         }
     }
 
@@ -94,7 +94,7 @@ if(!empty($_POST)){
         if($rows==1){
             $_SESSION['nom'] = $nomUtilisateur;
             $_SESSION['prenom'] = $prenomUtilisateur;
-            header("Location:../../front/respoTech\listedemandedevis.php ");
+            header("Location:../../front\respoTech\listedemandedevis.php ");
         }
     }
 

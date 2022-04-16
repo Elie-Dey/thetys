@@ -1,11 +1,11 @@
 <?php
-
 //Script de gestion de la couleur de la page active
 function PageName() {
   return substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
 } 
 $currentPage = PageName();
 ?>
+
 
 <style>
  li {
@@ -16,6 +16,7 @@ $currentPage = PageName();
   .cardMessage {
     background-color:white;
   }
+  
 
    </style>
    <nav
@@ -24,9 +25,15 @@ $currentPage = PageName();
         >
           <div class="position-sticky pt-3">
             <ul class="nav flex-column">
-              <!-- <li class="nav-item">
+              <li class="nav-item">
                 <a
-                  class=" <?php if ($currentPage == "acceuil.php") echo "active"; ?> nav-link fs-5"
+                  class="<?php 
+                if ($currentPage == "accueil.php") echo "active"; 
+                 
+
+                ?> 
+                  
+                  nav-link  fs-5"
                   aria-current="page"
                   href="../accueil/accueil.php"
                   
@@ -39,63 +46,56 @@ $currentPage = PageName();
                   </span>
                   Accueil
                 </a>
-              </li> -->
+              </li>
               <li class="nav-item">
-                <a class="nav-link <?php if ($currentPage == "creationdemande.php") echo "active"; ?>  fs-5" href="../client/creationdemande.php">
+                <a class="
+                <?php 
+                if ($currentPage == "listedemandes.php") echo "active"; 
+                 if ($currentPage == "detaildemande.php") echo "active"; 
+
+                ?> 
+                nav-link fs-5" href="../RespoCom/listedemandes.php">
                   <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus-fill" viewBox="0 0 16 16">
-  <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z"/>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list-task" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5H2zM3 3H2v1h1V3z"/>
+  <path d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9z"/>
+  <path fill-rule="evenodd" d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5V7zM2 7h1v1H2V7zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5H2zm1 .5H2v1h1v-1z"/>
 </svg>
                   </span>
-                  Nouvelle demande
-
-               
+                  Listes des demandes
                 </a>
               </li>
               <li class="nav-item">
-                <a class=" <?php
-                 if ($currentPage == "listedemande.php") echo "active"; 
-                  if ($currentPage == "detaildemande.php") echo "active"; 
-                
-                ?> nav-link fs-5" href="../client/listedemande.php">
+                <a class="
+                <?php 
+                if ($currentPage == "listecommandes.php") echo "active"; 
+                 if ($currentPage == "detailcommande.php") echo "active"; 
+
+                ?> 
+                nav-link fs-5" href="../RespoCom/listecommandes.php">
                   <span >
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
   <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
 </svg>
                   </span>
-                  Mes Demandes
+                  Liste des commandes
                 </a>
               </li>
               <li class="nav-item">
-                <a class=" <?php 
-                  if ($currentPage == "listedevis.php") echo "active"; 
-                   if ($currentPage == "detaildevis.php")  echo "active";
-                  
-                  ?> 
-                  nav-link fs-5  " href="../client/listedevis.php">
+                <a class="<?php 
+                if ($currentPage == "listedevis.php") echo "active"; 
+                 if ($currentPage == "detaildevis.php") echo "active";  
+
+                ?> 
+
+                nav-link fs-5" href="../RespoCom/listedevis.php">
                   <span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-wallet-fill" viewBox="0 0 16 16">
   <path d="M1.5 2A1.5 1.5 0 0 0 0 3.5v2h6a.5.5 0 0 1 .5.5c0 .253.08.644.306.958.207.288.557.542 1.194.542.637 0 .987-.254 1.194-.542.226-.314.306-.705.306-.958a.5.5 0 0 1 .5-.5h6v-2A1.5 1.5 0 0 0 14.5 2h-13z"/>
   <path d="M16 6.5h-5.551a2.678 2.678 0 0 1-.443 1.042C9.613 8.088 8.963 8.5 8 8.5c-.963 0-1.613-.412-2.006-.958A2.679 2.679 0 0 1 5.551 6.5H0v6A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-6z"/>
 </svg>
                   </span>
-                  Mes Devis
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class=" <?php 
-                  if ($currentPage == "listepv.php")  echo "active";  
-                   if ($currentPage == "detailpv.php")  echo "active";
-                   if ($currentPage == "signaturepv.php")  echo "active";
-                
-                    ?> nav-link fs-5" href="../client/listepv.php">
-                  <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
-  <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
-  <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
-</svg>
-                  </span>
-                  Mes PV
+                  Liste des devis
                 </a>
               </li>
             </ul>

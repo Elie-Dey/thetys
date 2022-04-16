@@ -48,8 +48,7 @@
       }
      
       .card{
-        background-color: rgb(21, 81, 170);
-
+        opacity: 0.6;
       }
       .bi-arrow-right-circle-fill{
         color: white;
@@ -58,9 +57,10 @@
         color: black;
       }
 
-     /* .disabled{
-       pointer-events:none
-      } */
+      a.disabled{
+    pointer-events: none;
+    cursor: default;
+}
     </style>
 
     

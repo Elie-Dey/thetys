@@ -52,15 +52,15 @@
 
       }
       .bi-arrow-right-circle-fill{
-        color: white;
+        color: gray;
       }
       .bi-arrow-right-circle-fill:hover {
         color: black;
       }
 
-     /* .disabled{
+     .disabled{
        pointer-events:none
-      } */
+      }
     </style>
 
     

@@ -49,18 +49,20 @@
      
       .card{
         background-color: rgb(21, 81, 170);
-
+        opacity: 0.4;
       }
       .bi-arrow-right-circle-fill{
         color: white;
+        display: none;
       }
       .bi-arrow-right-circle-fill:hover {
         color: black;
       }
 
-     /* .disabled{
-       pointer-events:none
-      } */
+      a.disabled{
+    pointer-events: none;
+    cursor: default;
+}
     </style>
 
     

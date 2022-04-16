@@ -40,8 +40,8 @@
   <body class="text-center">
 
     <main class="form-signin">
-      <form class="border border-2 rounded shadow-lg p-2 bg-body rounded bg-opacity-50" action="../thetys/back/connexion/login.php" method="POST">
-        <h1 class="h3 mb-5 fw-bold text-dark">AIRBLIO - TETHYS</h1>
+      <form class="border border-2 rounded mb-3 shadow-lg p-3 mb-5 bg-body rounded" action="../thetys/back/connexion/login.php" method="POST">
+        <h1 class="h3 mb-5 fw-bold fst-italic text-primary">AIRBLIO - TETHYS</h1>
 
         <div class="form-floating mb-3">
           <input
@@ -67,8 +67,9 @@
         <input class="w-100 btn btn-lg btn-primary" type="submit" value="Connexion">
           
         </input>
+
+        <p class="mt-5 pt-5 mb-3 text-white">Powered By SMART CONSULTING</p>
       </form>
-      <p class="mt-5 pt-5 mb-3 text-white">Powered By SMART CONSULTING</p>
     </main>
   </body>
 </html>

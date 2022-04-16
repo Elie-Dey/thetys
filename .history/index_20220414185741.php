@@ -41,7 +41,7 @@
 
     <main class="form-signin">
       <form class="border border-2 rounded shadow-lg p-2 bg-body rounded bg-opacity-50" action="../thetys/back/connexion/login.php" method="POST">
-        <h1 class="h3 mb-5 fw-bold text-dark">AIRBLIO - TETHYS</h1>
+        <h1 class="h3 mb-5 fw-bold text-primary">AIRBLIO - TETHYS</h1>
 
         <div class="form-floating mb-3">
           <input

@@ -58,9 +58,9 @@
         color: black;
       }
 
-     /* .disabled{
+     .disabled{
        pointer-events:none
-      } */
+      }
     </style>
 
     

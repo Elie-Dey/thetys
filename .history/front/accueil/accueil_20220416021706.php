@@ -36,7 +36,7 @@ $titre = "Accueil";
                 <h2 class="pt-3 mb-4 display-10 lh-1 fw-bold">
                   FACTURES
                 </h2>
-                <a style="text-decoration: none;" href="../direcFin/listefacture.php" class="disabled"><svg
+                <a style="text-decoration: none;" href="../direcFin/listefacture.php"><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="50"
                   height="50"
