@@ -10,30 +10,22 @@ if(!empty($_POST)){
     $identifiant = stripslashes($_POST["identifiant"]);
     $mdp = stripslashes($_POST["motdepasse"]);
 
-    //Extraction 2 premières lettres de l'identifiant 
     $codeIdentification = substr($identifiant, 0,2);
-
-    //Pour le client
     if($codeIdentification == "CL"){
-        $sql = "SELECT idclients, nom, reference
+        $sql = "SELECT * 
               FROM clients 
               WHERE idConnexion = '$identifiant'";
-        
 
         $requete = $db->query($sql);
         $client = $requete->fetch(PDO::FETCH_ASSOC);
         $nomClient = $client['nom'];
-        $id = $client['idclients'];
+        var_dump($client);
         $referenceClient = $client['reference'];
-       
-
-        
         $rows = $requete->rowCount();
 
         if($rows==1){
             $_SESSION['nom'] = $nomClient;
             $_SESSION['reference'] = $referenceClient;
-            $_SESSION['idClient'] = $id;
             header("Location:../../front\client\creationdemande.php ");
         }
     }

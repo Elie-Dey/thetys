@@ -35,7 +35,7 @@ $titre = "Détails demande";
                                           WHERE demande_id = $_GET[id]";
 
                 $requeteMaterielDemande = $db->query($sqlMaterielDemandes);
-                $materielsDemandes = $requeteMaterielDemande->fetchAll(PDO::FETCH_ASSOC);
+                $materielsDemandes = $requeteMaterielDemande->fetchAll();
              }
       ?>
       
@@ -127,13 +127,22 @@ $titre = "Détails demande";
 </div>
             
             <div class="col-md-6">
-              <label for="materiel1" class="form-label">Matériels </label>
-                <br>
-                 <?php 
-                  foreach ($materielsDemandes as $materielDemande) {
-                   echo $materielDemande['nom']. "</br> </br>"; 
-                  }
-                ?>
+              <label for="materiel1" class="form-label">Matériel 1</label>
+              <input
+                type="text"
+                class="form-control"
+                id="dateDeFin"
+                value=" <?=  $demande['dateFin']?>"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="materiel2" class="form-label">Matériel 2</label>
+               <input
+                type="text"
+                class="form-control"
+                id="dateDeFin"
+                value=" <?=  $demande['dateFin']?>"
+              />
             </div>
           </form>
         </main>

@@ -15,25 +15,30 @@ if(!empty($_POST)){
 
     //Pour le client
     if($codeIdentification == "CL"){
-        $sql = "SELECT idclients, nom, reference
+        $sql = "SELECT * 
               FROM clients 
               WHERE idConnexion = '$identifiant'";
         
 
+
         $requete = $db->query($sql);
         $client = $requete->fetch(PDO::FETCH_ASSOC);
         $nomClient = $client['nom'];
-        $id = $client['idclients'];
-        $referenceClient = $client['reference'];
-       
 
-        
+        $sql = "SELECT * 
+              FROM clients 
+              WHERE idConnexion = '$identifiant'";
+
+        $requete = $db->query($sql);
+        $client = $requete->fetchAll(PDO::FETCH_ASSOC);
+        $referenceClient = $client['reference'];
+        $id = $client['idclients'];
+        echo $id;
         $rows = $requete->rowCount();
 
         if($rows==1){
             $_SESSION['nom'] = $nomClient;
             $_SESSION['reference'] = $referenceClient;
-            $_SESSION['idClient'] = $id;
             header("Location:../../front\client\creationdemande.php ");
         }
     }

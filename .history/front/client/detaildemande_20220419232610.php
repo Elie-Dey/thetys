@@ -128,11 +128,11 @@ $titre = "Détails demande";
             
             <div class="col-md-6">
               <label for="materiel1" class="form-label">Matériels </label>
-                <br>
                  <?php 
-                  foreach ($materielsDemandes as $materielDemande) {
-                   echo $materielDemande['nom']. "</br> </br>"; 
+                  foreach ($materielsDemandes as $materiel) {
+                   echo $materiel['nom']; 
                   }
+
                 ?>
             </div>
           </form>

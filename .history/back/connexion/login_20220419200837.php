@@ -20,14 +20,22 @@ if(!empty($_POST)){
               WHERE idConnexion = '$identifiant'";
         
 
+
         $requete = $db->query($sql);
         $client = $requete->fetch(PDO::FETCH_ASSOC);
         $nomClient = $client['nom'];
-        $id = $client['idclients'];
+
+        // $sql = "SELECT * 
+        //       FROM clients 
+        //       WHERE idConnexion = '$identifiant'";
+
+        // $requete = $db->query($sql);
+        // $client = $requete->fetchAll(PDO::FETCH_ASSOC);
+         $id = $client['idclients'];
         $referenceClient = $client['reference'];
        
 
-        
+
         $rows = $requete->rowCount();
 
         if($rows==1){

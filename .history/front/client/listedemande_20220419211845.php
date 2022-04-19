@@ -30,7 +30,8 @@ $titre = "Liste des demandes";
 
       $sql = "SELECT * 
               FROM demandes
-              WHERE client_id = $_SESSION[idClient]";
+              WHERE client_id = $_SESSION[idClient] 
+              ORDER BY  dateDemande";
 
       $requete = $db->query($sql);
       $count = 0;

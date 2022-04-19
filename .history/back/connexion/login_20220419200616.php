@@ -20,12 +20,19 @@ if(!empty($_POST)){
               WHERE idConnexion = '$identifiant'";
         
 
+
         $requete = $db->query($sql);
         $client = $requete->fetch(PDO::FETCH_ASSOC);
         $nomClient = $client['nom'];
-        $id = $client['idclients'];
+
+        // $sql = "SELECT * 
+        //       FROM clients 
+        //       WHERE idConnexion = '$identifiant'";
+
+        // $requete = $db->query($sql);
+        // $client = $requete->fetchAll(PDO::FETCH_ASSOC);
         $referenceClient = $client['reference'];
-       
+        $idClient = $client['idclients'];
 
         
         $rows = $requete->rowCount();
@@ -33,7 +40,7 @@ if(!empty($_POST)){
         if($rows==1){
             $_SESSION['nom'] = $nomClient;
             $_SESSION['reference'] = $referenceClient;
-            $_SESSION['idClient'] = $id;
+            $_SESSION['idClient'] = $idClient;
             header("Location:../../front\client\creationdemande.php ");
         }
     }

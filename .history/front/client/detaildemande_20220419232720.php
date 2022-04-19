@@ -131,7 +131,7 @@ $titre = "Détails demande";
                 <br>
                  <?php 
                   foreach ($materielsDemandes as $materielDemande) {
-                   echo $materielDemande['nom']. "</br> </br>"; 
+                   echo $materielDemande['nom']. "</br>"; 
                   }
                 ?>
             </div>

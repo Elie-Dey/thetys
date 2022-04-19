@@ -30,15 +30,17 @@ $titre = "Liste des demandes";
 
       $sql = "SELECT * 
               FROM demandes
-              WHERE client_id = $_SESSION[idClient]";
+              WHERE client_id = $_SESSION[idClient] 
+              ORDER BY DESC";
 
       $requete = $db->query($sql);
       $count = 0;
 
      if($requete != FALSE ){
         $demandes = $requete->fetchAll(PDO::FETCH_ASSOC);
+        print_r($demande);
         foreach($demandes as $demande) : 
-        $count++;
+         $count++;
       
     ?>
     <tr>
@@ -47,16 +49,15 @@ $titre = "Liste des demandes";
       <td><?=  $count  ?></td>
       <td><?= $demande['dateDemande'] ?></td>
       <td><?=  $demande['statut'] ?></td>
-    
-     <td>
-          <a href="../client/detaildemande.php?id=<?=$demande['iddemandes']?>" class="text-dark m-3">
+      <!-- <td>
+          <a href="../client/detaildemande.php" class="text-dark m-3">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
   <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
   <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
 </svg>
         </a>
 
-      </td> 
+      </td> -->
       
     </tr>
 

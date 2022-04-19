@@ -20,6 +20,7 @@ if(!empty($_POST)){
               WHERE idConnexion = '$identifiant'";
         
 
+
         $requete = $db->query($sql);
         $client = $requete->fetch(PDO::FETCH_ASSOC);
         $nomClient = $client['nom'];
@@ -27,7 +28,7 @@ if(!empty($_POST)){
         $referenceClient = $client['reference'];
        
 
-        
+
         $rows = $requete->rowCount();
 
         if($rows==1){

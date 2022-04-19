@@ -109,13 +109,8 @@ $titre = "Nouvelle demande";
             <div class="col-md-6">
               <label for="materiel2" class="form-label">Matériel 2</label>
               <select name="materiel2" class="form-select">
-                <option selected>Choisissez...</option>
-                <?php 
-                  foreach ($materiels as $materiel) {
-                   echo "<option value=$materiel[idmateriels]> $materiel[nom]</option>"; 
-                  }
-
-                ?>
+                <option selected>Choose...</option>
+                <option>...</option>
               </select>
             </div>
           <div class="col-6">

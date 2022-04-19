@@ -1,7 +1,7 @@
  <?php
  
  session_start();
- 
+ @require "../admin.php";
  //Reload la page chaque une minute pour avoir l'heure à jour
     $url1=$_SERVER['REQUEST_URI'];
     header("Refresh: 60; URL=$url1");
