@@ -68,11 +68,6 @@ $titre = "Message";
          
       $requete = $db->query($sql);
 
-       $updateCommande = "UPDATE missioninterventions
-                                SET statutIntervention = 'PV ajouté'
-                                WHERE idmissionIntervention = $idMission ";
-
-         $updating = $db->query($updatepvIntervention);
 
     
      } 

@@ -8,34 +8,46 @@ $titre = "Message";
 
 <div class="container-fluid">
       <div class="row">
-    <?php  @include "../client/respoTech-navbar.php"; 
+    <?php  @include "../respoTech/respoTech-navbar.php"; 
     
      @require '../../back/admin.php';
 
-     if ($_SERVER["REQUEST_METHOD"] == "POST"){
-      $idPV = $_GET['idPV'];
-
     
-    if(!empty($_REQUEST['commentaires'])){
-        $commentaires = $_REQUEST['commentaires'];
-    } else {
-      $commentaires = "Aucun commentaires";
-    }
-    //Requete de mise à jour statut du PV
 
-        $updatepvIntervention = "UPDATE pvinterventions 
-                                SET signatureClient = 'Validé', commentaires = '$commentaires'
+    if ($_SERVER["REQUEST_METHOD"] == "POST"){
+
+
+      $lieuIntervention = $_REQUEST['lieuIntervention'];
+      $dateDebut = $_REQUEST['dateDeDebut'];
+      $dateFin = $_REQUEST['dateDeFin'];
+      $idEquipe = $_REQUEST['equipe'];
+      $idCommande = $_GET['idCom'];
+
+    //   $idDemande = $_GET['id'];
+    //   $idClient = $_GET['idclient'];
+
+
+     //Requete d'insertion des valeurs si c'est la premiere fois qu"elles sont saisies
+
+        $sql = "INSERT INTO missioninterventions (idmissionIntervention, localisationIntervention,dateDebut,dateFin, statutIntervention,typeMission, equipe_id, commande_id) 
+                VALUES                           (NULL, '$lieuIntervention', '$dateDebut', '$dateFin', 'Fiche crée', 'Intervention', '$idEquipe','$idCommande' )";
+
+         $requete = $db->query($sql);
+
+          $updateCommande = "UPDATE commandes
+                                SET statutCommande = 'Fiche crée', commentaires = '$commentaires'
                                 WHERE idPVIntervention = $idPV ";
 
          $updating = $db->query($updatepvIntervention);
       
-      if( $updating) {
+      
+      if($requete) {
             $var = "success";
       } else{
          $var = "error";
       }
     
-     } 
+      } 
      // <?= $var." ".$idClient." ".$idDemande." ".$totalTTc
     ?>
       
@@ -43,7 +55,7 @@ $titre = "Message";
 
 <div class="card cardMessage text-center mt-5 border-2 rounded mb-3 shadow-lg p-3 mb-5 bg-body rounded">
     <div class="card-header">
-      Message  
+      Message    <?= $var." ".$idEquipe." ".$dateDebut." ".$dateFin ?>
     
 
     </div>
@@ -52,7 +64,7 @@ $titre = "Message";
          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
           </svg>
       </h5>
-    <a href="../client/listepv.php" class="btn btn-primary mt-5">Retour</a>
+    <a href="../respoTech/listecommande.php" class="btn btn-primary mt-5">Retour</a>
   </div>
   <div class="card-footer text-muted">
   </div>

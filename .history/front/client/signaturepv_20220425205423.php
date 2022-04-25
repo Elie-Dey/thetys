@@ -32,11 +32,11 @@ $titre = "Signature PV";
                 $requete = $db->query($sql);
                 $demande = $requete->fetch(PDO::FETCH_ASSOC);
                 
-                $sqlMaterielDemandes = "SELECT * 
-                                        FROM materiels 
-                                        INNER JOIN materielsdemandes 
-                                        ON materiels.idmateriels = materielsdemandes.materiel_id
-                                        WHERE demande_id = $_GET[idDemande]";
+                  $sqlMaterielDemandes = "SELECT * 
+                                          FROM materiels 
+                                          INNER JOIN materielsdemandes 
+                                          ON materiels.idmateriels = materielsdemandes.materiel_id
+                                          WHERE demande_id = $_GET[idDemande]";
 
                 $requeteMaterielDemande = $db->query($sqlMaterielDemandes);
                 $materielsDemandes = $requeteMaterielDemande->fetchAll(PDO::FETCH_ASSOC);

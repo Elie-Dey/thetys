@@ -41,11 +41,11 @@ $titre = "Message";
          $updating = $db->query($updateDemande);
 
 
-      // if($requete || $updating) {
-      //       $var = "success";
-      // } else{
-      //    $var = "error";
-      // }
+      if($requete || $updating) {
+            $var = "success";
+      } else{
+         $var = "error";
+      }
     
      } 
      // <?= $var." ".$idClient." ".$idDemande." ".$totalTTc

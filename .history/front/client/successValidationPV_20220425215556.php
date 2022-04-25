@@ -43,7 +43,7 @@ $titre = "Message";
 
 <div class="card cardMessage text-center mt-5 border-2 rounded mb-3 shadow-lg p-3 mb-5 bg-body rounded">
     <div class="card-header">
-      Message  
+      Message   <?= $var ?>
     
 
     </div>

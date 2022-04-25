@@ -60,12 +60,12 @@ $titre = "Liste des commandes";
        <td>
            <a href="../respoTech/fichemission.php?id=<?=$commande['iddemandes']?>&idCommande=<?=$commande['idcommandes']?>" class="text-light  btn 
            
-        <?php  if($commande['statutCommande']=='Fiche crée') {
+        <?php  if($commande['statut']=='Devis effectué') {
              echo "btn-secondary";
         } else {
           echo "btn-primary";
         } ?>"  <?php  
-        if($commande['statutCommande']=='Fiche crée') 
+        if($commande['statutCommande']=='Devis effectué') 
              echo 'style="pointer-events: none"'; 
         ?>>
             Etablir fiche

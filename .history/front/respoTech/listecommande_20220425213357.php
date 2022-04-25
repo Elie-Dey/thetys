@@ -60,7 +60,7 @@ $titre = "Liste des commandes";
        <td>
            <a href="../respoTech/fichemission.php?id=<?=$commande['iddemandes']?>&idCommande=<?=$commande['idcommandes']?>" class="text-light  btn 
            
-        <?php  if($commande['statutCommande']=='Fiche crée') {
+        <?php  if($commande['statut']=='Fiche crée') {
              echo "btn-secondary";
         } else {
           echo "btn-primary";

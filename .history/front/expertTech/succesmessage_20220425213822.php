@@ -63,16 +63,10 @@ $titre = "Message";
       //Requete d'insertion des valeurs si c'est la premiere fois qu"elles sont saisies
 
        $sql = "INSERT INTO pvinterventions (idPVIntervention, signatureResponsable, signatureClient, dureeReelle, dateDebutRelle, dateFinReelle, materiel1Reel, materiel2Reel, description, commentaires, missionIntervention_id, statutPV) 
-               VALUES                       (NULL, NULL, NULL, '$dureeReelle', '$dateDebutRelle', '$dateFinReelle','$materiel1Reel','$materiel2Reel', '$description', NULL, '$idMission', 'PV ajouté')";
+               VALUES                       (NULL, NULL, NULL, '$dureeReelle', '$dateDebutRelle', '$dateFinReelle','$materiel1Reel','$materiel2Reel', '$description', NULL, '$idMission', 'PV ajouté');";
 
-         
-      $requete = $db->query($sql);
+         $requete = $db->query($sql);
 
-       $updateCommande = "UPDATE missioninterventions
-                                SET statutIntervention = 'PV ajouté'
-                                WHERE idmissionIntervention = $idMission ";
-
-         $updating = $db->query($updatepvIntervention);
 
     
      } 

@@ -102,7 +102,7 @@ $titre = "Liste des PV";
         }  
         ?>"
          <?php  
-        if($pvmission['signatureResponsable'] == 'Validé') 
+        if($pvmission['signatureResponsable'] !== NULL) 
              echo 'style="pointer-events: none"'; 
         ?>
         >

@@ -95,14 +95,15 @@ $titre = "Liste des PV";
         <a href="../respoTech/validationpvequipe.php?id=<?=$pvmission['idPVIntervention']?>&idDemande=<?=$pvmission['iddemandes']?>" class="text-light btn
         
         <?php 
-        if($pvmission['signatureResponsable'] != 'Validé'){
+        if($pvmission['signatureResponsable'] != NULL){
+          
            echo "btn-primary";
         } else {
            echo " btn-secondary";
         }  
         ?>"
          <?php  
-        if($pvmission['signatureResponsable'] == 'Validé') 
+        if($pvmission['signatureResponsable']="Validé") 
              echo 'style="pointer-events: none"'; 
         ?>
         >
