@@ -424,10 +424,7 @@ $titre = "Accueil";
                 <?php 
                 if($_SESSION['codeIdentification'] != "TE"){
                      echo 'style="pointer-events: none"';
-
                 }
-                
-
               ?>
                 
                 >

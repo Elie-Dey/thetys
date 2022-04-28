@@ -422,11 +422,17 @@ $titre = "Accueil";
                 </h2>
                 <a href="../visualisation/visualisation2.php"
                 <?php 
-                if($_SESSION['codeIdentification'] != "TE"){
+                if($_SESSION['codeIdentification'] != "CO"){
                      echo 'style="pointer-events: none"';
-
                 }
-                
+
+                // if($_SESSION['codeIdentification'] != "EQ"){
+                //      echo 'style="pointer-events: none"';
+                // }
+
+                // if($_SESSION['codeIdentification'] != "CO"){
+                //      echo 'style="pointer-events: none"';
+                // }
 
               ?>
                 

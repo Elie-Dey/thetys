@@ -400,15 +400,6 @@ $titre = "Accueil";
                 if($_SESSION['codeIdentification'] != "TE"){
                   echo 'bg-dark';
                 }
-                if($_SESSION['codeIdentification'] != "EQ"){
-                  echo 'bg-dark';
-                }
-                if($_SESSION['codeIdentification'] != "CO"){
-                  echo 'bg-dark';
-                }
-              
-              
-              
               ?>"
             >
               <div
@@ -424,10 +415,7 @@ $titre = "Accueil";
                 <?php 
                 if($_SESSION['codeIdentification'] != "TE"){
                      echo 'style="pointer-events: none"';
-
                 }
-                
-
               ?>
                 
                 >

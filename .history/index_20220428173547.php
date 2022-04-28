@@ -32,7 +32,7 @@
       body {
         background-color: white;
         background-image: url("images/indexSombreBg.jpg");
-        font-family: "Roboto", sans-serif;
+        font-family: 'Roboto';
       }
 
 
@@ -74,10 +74,6 @@
       </form>
        <p class="mt-5 pt-5 mb-3 text-white fw-bold">Powered By SMART CONSULTING </p>
        <img src="images/logo.jpg"  width="70" height="70" alt="" srcset=""> 
-
-
-
-       <p class="mt-2 pt-2 mb-0 text-white fw-bold">v1.1.0</p>
       
     </main>
   </body>

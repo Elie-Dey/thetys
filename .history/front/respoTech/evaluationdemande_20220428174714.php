@@ -156,7 +156,7 @@ $titre = "Création devis";
               <input type="text" class="form-control" name="coutMateriels" />
             </div>
             <div class="col-md-4">
-              <label for="tva" class="form-label">TVA (€) </label>
+              <label for="tva" class="form-label">TVA (€)</label>
               <input type="text" class="form-control" name="tva" />
             </div>
             <div class="col-md-12">

@@ -397,18 +397,9 @@ $titre = "Accueil";
             <div
               class="card card-cover h-100 overflow-hidden text-white rounded-5 shadow-lg
                <?php 
-                if($_SESSION['codeIdentification'] != "TE"){
+                if($_SESSION['codeIdentification'] != "EQ" || $_SESSION['codeIdentification'] != "TE" || $_SESSION['codeIdentification'] != "CO"){
                   echo 'bg-dark';
                 }
-                if($_SESSION['codeIdentification'] != "EQ"){
-                  echo 'bg-dark';
-                }
-                if($_SESSION['codeIdentification'] != "CO"){
-                  echo 'bg-dark';
-                }
-              
-              
-              
               ?>"
             >
               <div
@@ -424,10 +415,7 @@ $titre = "Accueil";
                 <?php 
                 if($_SESSION['codeIdentification'] != "TE"){
                      echo 'style="pointer-events: none"';
-
                 }
-                
-
               ?>
                 
                 >

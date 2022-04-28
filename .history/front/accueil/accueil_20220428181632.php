@@ -424,9 +424,15 @@ $titre = "Accueil";
                 <?php 
                 if($_SESSION['codeIdentification'] != "TE"){
                      echo 'style="pointer-events: none"';
-
                 }
-                
+
+                if($_SESSION['codeIdentification'] != "EQ"){
+                     echo 'style="pointer-events: none"';
+                }
+
+                if($_SESSION['codeIdentification'] != "CO"){
+                     echo 'style="pointer-events: none"';
+                }
 
               ?>
                 

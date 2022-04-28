@@ -77,7 +77,7 @@
 
 
 
-       <p class="mt-2 pt-2 mb-0 text-white fw-bold">v1.1.0</p>
+       <p class="mt-2 pt-2 mb-0 text-white fw-bold">v1.1.2</p>
       
     </main>
   </body>

@@ -390,26 +390,16 @@ $titre = "Accueil";
               </div>
             </div>
           </div>
-
-
-
           <div class="col">
             <div
               class="card card-cover h-100 overflow-hidden text-white rounded-5 shadow-lg
                <?php 
-                if($_SESSION['codeIdentification'] != "TE"){
-                  echo 'bg-dark';
+                if($_SESSION['codeIdentification'] != "EQ" || $_SESSION['codeIdentification'] != "TE"){
+                  echo "bg-dark";
                 }
-                if($_SESSION['codeIdentification'] != "EQ"){
-                  echo 'bg-dark';
-                }
-                if($_SESSION['codeIdentification'] != "CO"){
-                  echo 'bg-dark';
-                }
+              ?>
               
-              
-              
-              ?>"
+              "
             >
               <div
                 class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
@@ -422,12 +412,9 @@ $titre = "Accueil";
                 </h2>
                 <a href="../visualisation/visualisation2.php"
                 <?php 
-                if($_SESSION['codeIdentification'] != "TE"){
+                if($_SESSION['codeIdentification'] != "EQ" || $_SESSION['codeIdentification'] != "CO" || $_SESSION['codeIdentification'] != "TE"){
                      echo 'style="pointer-events: none"';
-
                 }
-                
-
               ?>
                 
                 >
@@ -447,9 +434,6 @@ $titre = "Accueil";
               </div>
             </div>
           </div>
-
-
-
           <div class="col">
             <div
               class="card card-cover h-100 overflow-hidden text-white rounded-5 shadow-lg
