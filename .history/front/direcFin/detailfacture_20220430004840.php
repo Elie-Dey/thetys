@@ -67,7 +67,7 @@ $titre = "Détails facture";
               <input  readonly type="text" class="form-control" id="nom" value="<?= $demande['nom'];?>" />
             </div>
             <div class="col-md-6">
-              <label for="reference" class="form-label">Réference</label>
+              <label for="reference" class="form-label">reference</label>
               <input readonly type="text" class="form-control" id="reference"  value="<?= $demande['reference'];?>" />
             </div>
             <div class="col-12">

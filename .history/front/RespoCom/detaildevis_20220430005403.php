@@ -1,6 +1,6 @@
 <?php 
 //Definition du titre de la page 
-$titre = "Détails demande";
+$titre = "Détails devis";
 @include "../includes/head-style.php";
 @include "../includes/header.php";
 ?>
@@ -8,23 +8,22 @@ $titre = "Détails demande";
 <div class="container-fluid">
       <div class="row">
       <?php  @include "../RespoCom/respoCom-navbar.php";  
-      
-         @require '../../back/admin.php';
+     @require '../../back/admin.php';
 
 
-             if(!empty($_GET['id'])){
+      if(!empty($_GET['id'])){
 
-                $sql = "SELECT * 
-                        FROM demandes
-                        INNER JOIN clients 
-                        ON demandes.client_id = clients.idclients
-                        WHERE  iddemandes = $_GET[id]";
-                
+              $sql = "SELECT * FROM devis
+                      INNER JOIN demandes 
+                      ON devis.demande_id = demandes.iddemandes 
+                      INNER JOIN clients ON clients.idclients = demandes.client_id
+                      WHERE iddevis = $_GET[id]";
+
 
                 $requete = $db->query($sql);
                 $demande = $requete->fetch(PDO::FETCH_ASSOC);
 
-                 $sqlMateriel = "SELECT idmateriels, nom
+                $sqlMateriel = "SELECT idmateriels, nom
                            FROM materiels ";
                            
                   $requeteMateriel = $db->query($sqlMateriel);
@@ -39,15 +38,22 @@ $titre = "Détails demande";
 
                 $requeteMaterielDemande = $db->query($sqlMaterielDemandes);
                 $materielsDemandes = $requeteMaterielDemande->fetchAll(PDO::FETCH_ASSOC);
-             }
-      ?>
+
+      }
       
+      
+      ?>
       
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 pt-5">
 
+
           <form class="row g-3 border border-2 rounded mb-3 shadow-lg p-3 mb-5 bg-body rounded">
-            <legend class="text-center"> Formulaire détails de la demande</legend>
-            <div class="col-md-6">
+
+
+            <legend class="text-center"> Formulaire détails devis</legend>
+
+
+           <div class="col-md-6">
               <label for="nom" class="form-label">Nom Client</label>
               <input  readonly type="text" class="form-control" id="nom" value="<?= $demande['nom'];?>" />
             </div>
@@ -130,7 +136,7 @@ $titre = "Détails demande";
 </div>
             
             <div class="col-md-6">
-              <label for="materiel1" class="form-label">Matériels démandés </label>
+              <label for="materiel1" class="form-label">Matériels </label>
                 <br>
                  <?php 
                   foreach ($materielsDemandes as $materielDemande) {
@@ -138,10 +144,46 @@ $titre = "Détails demande";
                   }
                 ?>
             </div>
+
+
+          <div class=" col-12 fw-bold text-decoration-underline fst-italic">  Coûts </div>
+
+
+
+        <div class="col-md-4">
+              <label for="interventionHumaine" class="form-label">Coût Intervention Humaine</label>
+              <input type="text" class="form-control" id="interventionHumaine" value="<?= $demande['CoutIH']?>" readonly />
+            </div>
+            <div class="col-md-4">
+              <label for="coutMateriels" class="form-label">Coût Matériels </label>
+              <input type="text" class="form-control" id="coutMateriels"value="<?=  $demande['coutMateriel'] ?>" readonly />
+            </div>
+            <div class="col-md-4">
+              <label for="tva" class="form-label">TVA</label>
+              <input type="text" class="form-control" id="tva"value="<?=$demande['tva'] ?>" readonly />
+            </div>
+            <div class="col-md-12">
+              <label for="totalttc" class="form-label">Total TTC</label>
+              <input type="text" class="form-control" id="totalttc"value="<?=  $demande['coutTotal'] ?>" readonly />
+            </div>
+
+             <!-- <div class="col-6">
+              <a href="../client/listedevis.php" class="btn btn-danger m-3 d-grid gap-2 col-6 mx-auto"> Annuler  </a>
+            </div> -->
+            <!-- <div class="col-6">
+              <input class="btn btn-success m-3 d-grid gap-2 col-6 mx-auto" name="validerDevis" type="submit" value="Valider le devis">
+            </div> -->
+            <!-- <div class="col-6">
+              <a href="../client/successmessage.php?id=<?=$demande['iddevis']?>" class="btn btn-success m-3 d-grid gap-2 col-6 mx-auto"> Valider </a>
+            </div> -->
           </form>
         </main>
       </div>
     </div>
+
+
+
+
 
 <?php  
 @include "../includes/footer.php";

@@ -177,7 +177,7 @@ $titre = "Accueil";
               class="card card-cover h-100 overflow-hidden text-white rounded-5 shadow-lg
             <?php 
                 if($_SESSION['codeIdentification'] != "FI"){
-                  echo "bg-secondary";
+                  echo "bg-dark";
                 }
               ?>
               "
@@ -234,7 +234,7 @@ $titre = "Accueil";
               class="card card-cover h-100 overflow-hidden text-white rounded-5 shadow-lg
                <?php 
                 if( $_SESSION['codeIdentification'] != "CO"){
-                  echo "bg-secondary";
+                  echo "bg-dark";
                 }
               ?>
               
@@ -293,7 +293,7 @@ $titre = "Accueil";
               class="card card-cover h-100 overflow-hidden text-white rounded-5 shadow-lg
                <?php 
                 if($_SESSION['codeIdentification'] != "EQ"){
-                  echo "bg-secondary";
+                  echo "bg-dark";
                 }
               ?>
               "
@@ -307,7 +307,7 @@ $titre = "Accueil";
   <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
 </svg>
                 <h2 class="pt-3 mb-4 display-10 lh-1 fw-bold">
-                  ÉQUIPES
+                  EQUIPES
                 </h2>
                 <a href="../expertTech/listefichemissions.php"
                 <?php 
@@ -337,12 +337,21 @@ $titre = "Accueil";
 
 
 
+
+
+
+
+
+
+
+
+
           <div class="col">
             <div
               class="card card-cover h-100 overflow-hidden text-white rounded-5 shadow-lg
                <?php 
                 if($_SESSION['codeIdentification'] != "TE"){
-                  echo "bg-secondary";
+                  echo "bg-dark";
                 }
               ?>
               
@@ -458,7 +467,7 @@ $titre = "Accueil";
   <path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2z"/>
 </svg>
                 <h2 class="pt-3 mb-4 display-10 lh-1 fw-bold">
-                  DONNÉES
+                  DONNEES
                 </h2>
                 <a href="../donnees/donnee.php"
                 <?php 
