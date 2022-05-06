@@ -7,12 +7,12 @@ $titre = "Visualisation";
 
 <div class="container-fluid">
       <div class="row">
-    <?php  @include "../visualisation/visu-navbar.php"; ?>
+    <?php  @include "../respoTech/respoTech-navbar.php"; ?>
 
-<main class="col-md-9 ms-sm-auto col-lg-10 pt-0">
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 pt-5">
           
       <div class="cont">
-    <iframe src="https://www.google.com/maps/d/embed?mid=1LgjOCaPVwVH_O5YGXkxhBrHHALO2M_1Z&ehbc=2E312F" width="1500" height="750"></iframe>
+    <iframe src="https://www.google.com/maps/d/embed?mid=1LgjOCaPVwVH_O5YGXkxhBrHHALO2M_1Z&ehbc=2E312F" width="1500" height="650"></iframe>
         </div>
    
         </main>

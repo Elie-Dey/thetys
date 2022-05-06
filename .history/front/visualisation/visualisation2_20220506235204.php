@@ -7,7 +7,7 @@ $titre = "Visualisation";
 
 <div class="container-fluid">
       <div class="row">
-    <?php  @include "../visualisation/visu-navbar.php"; ?>
+    <?php  @include "../respoTech/respoTech-navbar.php"; ?>
 
 <main class="col-md-9 ms-sm-auto col-lg-10 pt-0">
           
